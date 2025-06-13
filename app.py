@@ -41,26 +41,32 @@ def show_fallback_interface():
     if st.button("🔄 重新加载应用"):
         st.rerun()
 
-# 导入系统（优先使用稳定版本）
+# 导入系统（优先使用安全增强版本）
 try:
-    # 首先尝试简化版本（最稳定）
-    from simple_streamlit_app import main as simple_main
-    simple_main()
+    # 首先尝试安全增强版本（第三阶段）
+    from secure_streamlit_app import main as secure_main
+    secure_main()
 except ImportError as e:
-    st.warning(f"简化版本导入失败: {e}")
+    st.info(f"安全增强版本不可用，使用优化版本: {e}")
     try:
-        # 尝试集成版本
-        from integrated_streamlit_app import main as integrated_main
-        integrated_main()
+        # 尝试优化版本（第二阶段）
+        from optimized_streamlit_app import main as optimized_main
+        optimized_main()
     except ImportError as e2:
-        st.warning(f"集成版本导入失败: {e2}")
+        st.warning(f"优化版本不可用，使用集成版本: {e2}")
         try:
-            # 最后尝试完整系统
-            from ui.streamlit_app import main as full_main
-            full_main()
-        except Exception as e3:
-            st.error(f"所有版本加载失败: {e3}")
-            show_fallback_interface()
+            # 尝试集成版本（第一阶段）
+            from integrated_streamlit_app import main as integrated_main
+            integrated_main()
+        except ImportError as e3:
+            st.warning(f"集成版本导入失败，使用简化版本: {e3}")
+            try:
+                # 回退到简化版本
+                from simple_streamlit_app import main as simple_main
+                simple_main()
+            except Exception as e4:
+                st.error(f"所有版本加载失败: {e4}")
+                show_fallback_interface()
 except Exception as e:
     st.error(f"系统运行失败: {e}")
     show_fallback_interface()
