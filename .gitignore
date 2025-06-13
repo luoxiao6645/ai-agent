@@ -69,3 +69,67 @@ tmp/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 敏感信息和API密钥
+**/api_keys.txt
+**/secrets.txt
+**/config/production.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# 配置文件（可能包含敏感信息）
+config/production.py
+config/secrets.py
+settings/production.py
+settings/secrets.py
+
+# 备份文件（可能包含敏感信息）
+*.bak
+*.backup
+*.old
+
+# 缓存目录（可能包含敏感数据）
+cache/
+.cache/
+
+# 安全版本目录（由隐私保护工具生成）
+safe_versions/
+
+# 测试和开发文件
+test_api_keys.py
+dev_secrets.py
+local_config.py
+# 敏感信息文件
+.env
+*.env
+secrets.toml
+config/secrets.json
+
+# API密钥和配置
+**/api_keys.txt
+**/secrets.txt
+**/config/production.json
+
+# 日志文件（可能包含敏感信息）
+logs/
+*.log
+
+# 缓存和临时文件
+cache/
+tmp/
+temp/
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 备份文件
+*.bak
+*.backup
+
+# 系统文件
+.DS_Store
+Thumbs.db
