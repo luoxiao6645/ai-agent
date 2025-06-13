@@ -1,14 +1,15 @@
+# -*- coding: utf-8 -*-
 """
-智能多模态AI Agent - 网站部署版本
-主入口文件
+Multimodal AI Agent - Web Deployment Version
+Main Entry File
 """
 import streamlit as st
 import os
 import sys
 
-# 设置页面配置
+# Set page configuration
 st.set_page_config(
-    page_title="智能多模态AI Agent",
+    page_title="Multimodal AI Agent",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
