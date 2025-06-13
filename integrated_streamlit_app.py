@@ -36,13 +36,13 @@ def try_import_full_system():
     try:
         # 添加项目根目录到Python路径
         sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-        
+
         from multimodal_agent.core.agent import MultiModalAgent
         from multimodal_agent.tools.tool_manager import ToolManager
         from config import Config
         return True, MultiModalAgent, ToolManager, Config
-    except ImportError as e:
-        st.warning(f"完整系统组件导入失败: {e}")
+    except Exception as e:
+        # 不显示警告，静默处理
         return False, None, None, None
 
 # 检查系统能力
