@@ -37,42 +37,69 @@
 ## 📦 快速开始
 
 ### 环境要求
-- Docker & Docker Compose
-- OpenAI API密钥
+- Python 3.9+
+- Docker & Docker Compose (可选)
+- 火山方舟API密钥 或 OpenAI API密钥
 
-### 安装步骤
+### 🔒 安全配置（重要！）
 
-1. **克隆项目**
+**⚠️ 在开始之前，请务必安全地配置您的API密钥**
+
+#### 方式1：使用安全设置脚本（推荐）
 ```bash
-git clone <repository-url>
-cd multimodal-ai-agent
+# 克隆项目
+git clone https://github.com/luoxiao6645/ai-agent.git
+cd ai-agent
+
+# 运行安全设置脚本
+python secure_setup.py
 ```
 
-2. **配置环境变量**
+#### 方式2：手动配置
 ```bash
 # 复制环境变量模板
 cp .env.example .env
 
-# 编辑.env文件，填入您的OpenAI API密钥
+# 安全编辑.env文件（请勿在公共场所操作）
+nano .env  # 或使用其他编辑器
+
+# 将示例值替换为您的真实API密钥
+# ARK_API_KEY=your_volcano_engine_ark_api_key_here
 # OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-3. **启动系统**
+#### 🛡️ 安全提醒
+- ❌ **绝不要**将真实API密钥提交到Git
+- ✅ 确保`.env`文件在`.gitignore`中
+- 🔍 运行`python privacy_protection.py`检查敏感信息
+- 📖 详细安全指南请查看 [SECURITY_GUIDE.md](SECURITY_GUIDE.md)
 
-**Linux/Mac:**
+### 启动应用
+
+#### 方式1：快速启动（推荐新手）
 ```bash
-chmod +x start.sh
-./start.sh
+python quick_start.py
 ```
 
-**Windows:**
-```cmd
-start.bat
+#### 方式2：增强版启动
+```bash
+python enhanced_app.py
 ```
 
-4. **访问系统**
-- Web界面: http://localhost:8501
-- ChromaDB管理: http://localhost:8000
+#### 方式3：Docker部署
+```bash
+docker-compose up -d
+```
+
+#### 方式4：Streamlit Cloud部署
+- 推送代码到GitHub
+- 在Streamlit Cloud中配置Secrets
+- 详见 [STREAMLIT_CLOUD_SETUP.md](STREAMLIT_CLOUD_SETUP.md)
+
+### 访问应用
+- 🌐 **主应用**: http://localhost:8501
+- 🏥 **健康检查**: http://localhost:8080/health
+- 📊 **系统指标**: http://localhost:8080/metrics
 
 ## 🏗️ 项目结构
 
