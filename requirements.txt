@@ -46,5 +46,17 @@ strawberry-graphql>=0.214.0
 # 数据验证
 pydantic>=2.5.0
 
+# 本地模型支持
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.24.0
+bitsandbytes>=0.41.0
+
+# Ollama支持（可选）
+# ollama>=0.1.0
+
+# 插件系统依赖
+importlib-metadata>=6.0.0
+
 # 修复protobuf版本冲突
 protobuf<=3.20.3
