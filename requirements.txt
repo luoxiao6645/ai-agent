@@ -1,11 +1,15 @@
-# 多模态AI Agent - 第三阶段安全加固版本
+# 多模态AI Agent - 第四阶段性能优化与生产就绪版本
 # 核心依赖
 streamlit>=1.28.0
 openai>=1.0.0
 python-dotenv>=1.0.0
 
-# 网络请求
+# 网络请求和连接池
 requests>=2.31.0
+urllib3>=2.0.0
+
+# Web框架（健康检查端点）
+flask>=2.3.0
 
 # 文件处理
 Pillow>=10.0.0
@@ -25,6 +29,9 @@ psutil>=5.9.0
 
 # 安全和加密
 cryptography>=41.0.0
+
+# 异步处理
+asyncio-throttle>=1.0.2
 
 # 修复protobuf版本冲突
 protobuf<=3.20.3
