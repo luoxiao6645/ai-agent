@@ -1,0 +1,13 @@
+{
+  "name": "multimodal-agent-local",
+  "port": 8502,
+  "status": "running",
+  "created": "2025-06-13 12:21:07",
+  "image": "multimodal-agent:local",
+  "command": "streamlit run simple_streamlit_app.py",
+  "environment": {
+    "ARK_API_KEY": "***",
+    "ARK_BASE_URL": null,
+    "ARK_MODEL": null
+  }
+}
