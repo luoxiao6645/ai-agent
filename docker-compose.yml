@@ -70,24 +70,116 @@ services:
           memory: 512M
           cpus: '0.5'
 
-  # 可选：添加监控服务
-  monitoring:
+  # Prometheus监控
+  prometheus:
     image: prom/prometheus:latest
-    container_name: ai-agent-monitoring
+    container_name: ai-agent-prometheus
     ports:
       - "9090:9090"
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/etc/prometheus/console_libraries'
       - '--web.console.templates=/etc/prometheus/consoles'
       - '--web.enable-lifecycle'
+      - '--web.enable-admin-api'
     profiles:
       - monitoring
     depends_on:
       - ai-agent
+
+  # Grafana仪表板
+  grafana:
+    image: grafana/grafana:latest
+    container_name: ai-agent-grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana-dashboard.json:/etc/grafana/provisioning/dashboards/ai-agent.json
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    profiles:
+      - monitoring
+    depends_on:
+      - prometheus
+
+  # GraphQL API服务
+  graphql-api:
+    build: .
+    container_name: ai-agent-graphql
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ARK_API_KEY=${ARK_API_KEY}
+      - ARK_BASE_URL=${ARK_BASE_URL:-https://ark.cn-beijing.volces.com/api/v3}
+      - ARK_MODEL=${ARK_MODEL:-ep-20250506230532-w7rdw}
+    volumes:
+      - ./logs:/app/logs
+      - ./cache:/app/cache
+    command: ["python", "api/graphql_server.py"]
+    profiles:
+      - api
+    depends_on:
+      - ai-agent
+
+  # 移动端API服务
+  mobile-api:
+    build: .
+    container_name: ai-agent-mobile-api
+    ports:
+      - "8001:8001"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ARK_API_KEY=${ARK_API_KEY}
+      - ARK_BASE_URL=${ARK_BASE_URL:-https://ark.cn-beijing.volces.com/api/v3}
+      - ARK_MODEL=${ARK_MODEL:-ep-20250506230532-w7rdw}
+    volumes:
+      - ./logs:/app/logs
+      - ./cache:/app/cache
+    command: ["python", "api/mobile_api.py"]
+    profiles:
+      - api
+    depends_on:
+      - ai-agent
+
+  # Elasticsearch (ELK Stack)
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: ai-agent-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    profiles:
+      - elk
+
+  # Kibana (ELK Stack)
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    container_name: ai-agent-kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    profiles:
+      - elk
+    depends_on:
+      - elasticsearch
+
+volumes:
+  prometheus_data:
+  grafana_data:
+  elasticsearch_data:
 
 networks:
   default:
