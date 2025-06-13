@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Multimodal AI Agent - Web Deployment Version
+Multimodal AI Agent - Complete System
 Main Entry File
 """
 import streamlit as st
 import os
 import sys
+import asyncio
+from datetime import datetime
 
-# Set page configuration
+# Set page configuration (只在主入口设置一次)
 st.set_page_config(
-    page_title="Multimodal AI Agent",
+    page_title="智能多模态AI Agent系统",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -19,27 +21,46 @@ st.set_page_config(
 if os.path.dirname(os.path.abspath(__file__)) not in sys.path:
     sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-# 导入主应用
-try:
-    # 尝试导入simple_streamlit_app的主要功能
-    exec(open('simple_streamlit_app.py').read())
-except Exception as e:
-    st.error(f"应用加载失败: {e}")
-    st.info("请检查应用配置和依赖包是否正确安装")
-    
-    # 显示基本信息
+def show_fallback_interface():
+    """显示备用界面"""
     st.title("🤖 智能多模态AI Agent")
     st.markdown("""
     ### 欢迎使用智能多模态AI Agent！
-    
+
     这是一个基于火山方舟API的智能助手，支持：
     - 💬 智能对话
     - 📄 文档处理
     - 🎨 创意写作
     - 🔧 AI工具箱
-    
-    **部署状态**: 正在初始化...
+
+    **当前状态**: 系统正在维护中...
     """)
-    
-    if st.button("重新加载应用"):
-        st.experimental_rerun()
+
+    st.info("请检查配置文件和依赖包是否正确安装")
+
+    if st.button("🔄 重新加载应用"):
+        st.rerun()
+
+# 导入系统（优先使用稳定版本）
+try:
+    # 首先尝试简化版本（最稳定）
+    from simple_streamlit_app import main as simple_main
+    simple_main()
+except ImportError as e:
+    st.warning(f"简化版本导入失败: {e}")
+    try:
+        # 尝试集成版本
+        from integrated_streamlit_app import main as integrated_main
+        integrated_main()
+    except ImportError as e2:
+        st.warning(f"集成版本导入失败: {e2}")
+        try:
+            # 最后尝试完整系统
+            from ui.streamlit_app import main as full_main
+            full_main()
+        except Exception as e3:
+            st.error(f"所有版本加载失败: {e3}")
+            show_fallback_interface()
+except Exception as e:
+    st.error(f"系统运行失败: {e}")
+    show_fallback_interface()

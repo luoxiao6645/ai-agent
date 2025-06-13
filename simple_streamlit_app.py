@@ -11,13 +11,7 @@ from dotenv import load_dotenv
 # 加载环境变量
 load_dotenv()
 
-# 页面配置
-st.set_page_config(
-    page_title="智能多模态AI Agent",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+# 页面配置已在app.py中设置，这里不再重复设置
 
 # 初始化OpenAI客户端
 @st.cache_resource
@@ -376,5 +370,7 @@ def data_analysis_tool(client, model):
             except Exception as e:
                 st.error(f"分析失败: {e}")
 
+# 主函数可以被app.py导入和调用
+# 如果直接运行此文件，也会执行main函数
 if __name__ == "__main__":
     main()

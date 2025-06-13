@@ -19,34 +19,39 @@ from config import Config
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# 页面配置
-st.set_page_config(
-    page_title="智能多模态AI Agent",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+# 页面配置已在app.py中设置，这里不再重复设置
 
 # 初始化会话状态
-if 'agent' not in st.session_state:
+@st.cache_resource
+def initialize_agent():
+    """初始化Agent（缓存资源）"""
     try:
-        st.session_state.agent = MultiModalAgent()
-        st.session_state.conversation_history = []
-        st.session_state.initialized = True
+        return MultiModalAgent()
     except Exception as e:
-        st.session_state.initialized = False
-        st.session_state.error = str(e)
+        st.error(f"Agent初始化失败: {e}")
+        return None
+
+# 初始化会话状态
+if 'conversation_history' not in st.session_state:
+    st.session_state.conversation_history = []
+
+if 'initialized' not in st.session_state:
+    st.session_state.initialized = False
 
 def main():
     """主界面"""
     st.title("🤖 智能多模态AI Agent系统")
     st.markdown("---")
-    
-    # 检查初始化状态
-    if not st.session_state.get('initialized', False):
-        st.error(f"系统初始化失败: {st.session_state.get('error', '未知错误')}")
-        st.info("请检查配置文件和依赖包是否正确安装")
+
+    # 初始化Agent
+    agent = initialize_agent()
+    if not agent:
+        st.error("系统初始化失败，请检查配置文件和依赖包")
+        st.info("正在尝试使用简化版本...")
         return
+
+    st.session_state.agent = agent
+    st.session_state.initialized = True
     
     # 侧边栏
     with st.sidebar:
