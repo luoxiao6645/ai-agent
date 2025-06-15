@@ -4,7 +4,7 @@
 """
 import os
 import subprocess
-import sys
+
 
 def check_git_repo():
     """检查是否为Git仓库"""
@@ -13,6 +13,7 @@ def check_git_repo():
         return True
     except (subprocess.CalledProcessError, FileNotFoundError):
         return False
+
 
 def init_git_repo():
     """初始化Git仓库"""
@@ -26,28 +27,30 @@ def init_git_repo():
         print(f"❌ Git初始化失败: {e}")
         return False
 
+
 def check_requirements():
     """检查部署要求"""
     print("🔍 检查部署要求...")
-    
+
     # 检查必要文件
     required_files = ['app.py', 'simple_streamlit_app.py', 'requirements.txt']
     missing_files = []
-    
+
     for file in required_files:
         if not os.path.exists(file):
             missing_files.append(file)
-    
+
     if missing_files:
         print(f"❌ 缺少必要文件: {', '.join(missing_files)}")
         return False
-    
+
     # 检查环境变量
     if not os.path.exists('.env'):
         print("⚠️ 未找到.env文件，请确保在部署平台配置环境变量")
-    
+
     print("✅ 部署要求检查完成")
     return True
+
 
 def show_deployment_options():
     """显示部署选项"""
@@ -58,6 +61,7 @@ def show_deployment_options():
     print("4. Render (免费额度)")
     print("5. 显示部署指南")
     print("0. 退出")
+
 
 def show_streamlit_cloud_guide():
     """显示Streamlit Cloud部署指南"""
@@ -74,27 +78,28 @@ def show_streamlit_cloud_guide():
     print("   ARK_MODEL = ep-20250506230532-w7rdw")
     print("8. 点击Deploy!")
 
+
 def main():
     """主函数"""
     print("🤖 多模态AI Agent 部署助手")
     print("=" * 50)
-    
+
     # 检查部署要求
     if not check_requirements():
         print("请先解决上述问题后再进行部署")
         return
-    
+
     # 检查Git仓库
     if not check_git_repo():
         print("📁 未检测到Git仓库")
         if input("是否初始化Git仓库? (y/n): ").lower() == 'y':
             if not init_git_repo():
                 return
-    
+
     while True:
         show_deployment_options()
         choice = input("\n请选择 (0-5): ").strip()
-        
+
         if choice == '0':
             print("👋 再见!")
             break

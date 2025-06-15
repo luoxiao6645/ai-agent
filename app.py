@@ -1,209 +1,74 @@
 # -*- coding: utf-8 -*-
 """
 智能多模态AI Agent - Streamlit Cloud版本
-专为Streamlit Cloud环境优化
+专为Streamlit Cloud环境优化，使用重构后的公共工具模块
 """
 import streamlit as st
-import os
 import sys
-from datetime import datetime
 
-# 页面配置
-st.set_page_config(
-    page_title="智能多模态AI Agent",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="expanded"
+from pathlib import Path
+
+# 添加项目根目录到Python路径
+project_root = Path(__file__).parent
+sys.path.insert(0, str(project_root))
+
+# 导入公共工具模块
+from utils.common import (
+
+    APIClientManager,
+    StreamlitUIHelper,
+    FileProcessor,
+    ChatManager
 )
 
-def check_streamlit_secrets():
-    """检查Streamlit Cloud的secrets配置"""
-    try:
-        # 尝试从Streamlit secrets获取API密钥
-        if hasattr(st, 'secrets'):
-            # 检查ARK API密钥
-            ark_api_key = st.secrets.get("ARK_API_KEY", None)
-            if ark_api_key and ark_api_key not in ["your_volcano_engine_ark_api_key_here", ""]:
-                os.environ["ARK_API_KEY"] = ark_api_key
-                # 设置其他相关环境变量
-                if "ARK_BASE_URL" in st.secrets:
-                    os.environ["ARK_BASE_URL"] = st.secrets["ARK_BASE_URL"]
-                if "ARK_MODEL" in st.secrets:
-                    os.environ["ARK_MODEL"] = st.secrets["ARK_MODEL"]
-                return True
+# 页面配置
+StreamlitUIHelper.setup_page_config()
 
-            # 检查OpenAI API密钥作为备选
-            openai_api_key = st.secrets.get("OPENAI_API_KEY", None)
-            if openai_api_key and openai_api_key not in ["your_openai_api_key_here", ""]:
-                os.environ["OPENAI_API_KEY"] = openai_api_key
-                if "OPENAI_BASE_URL" in st.secrets:
-                    os.environ["OPENAI_BASE_URL"] = st.secrets["OPENAI_BASE_URL"]
-                return True
-
-        return False
-    except Exception as e:
-        st.error(f"读取Secrets时出错: {e}")
-        return False
 
 def init_streamlit_client():
     """初始化Streamlit Cloud客户端"""
-    try:
-        from openai import OpenAI
+    # 使用重构后的API客户端管理器
+    result = APIClientManager.create_openai_client()
 
-        # 首先检查Streamlit secrets
-        if check_streamlit_secrets():
-            st.success("✅ 从Streamlit Secrets加载API密钥")
-
-        # 获取API密钥
-        ark_api_key = os.getenv("ARK_API_KEY")
-        openai_api_key = os.getenv("OPENAI_API_KEY")
-
-        if not ark_api_key and not openai_api_key:
-            st.error("❌ 未找到API密钥")
-            st.markdown("""
-            ### 🔧 配置说明
-
-            在Streamlit Cloud中，您需要在应用设置中添加Secrets：
-
-            1. **进入应用管理页面**
-               - 访问 https://share.streamlit.io/
-               - 找到您的应用 `ai-agent`
-
-            2. **配置Secrets**
-               - 点击应用右侧的 "⚙️" 按钮
-               - 选择 "Settings" → "Secrets"
-               - 添加以下配置：
-
-            ```toml
-            # 火山方舟API配置（推荐）
-            ARK_API_KEY = "4a2cb69e-f24e-41f0-83ec-358b6ccd0eab"
-            ARK_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
-            ARK_MODEL = "ep-20250506230532-w7rdw"
-
-            # 或者OpenAI API配置
-            OPENAI_API_KEY = "your_openai_api_key_here"
-            OPENAI_BASE_URL = "https://api.openai.com/v1"
-            ```
-
-            3. **保存并重新部署**
-               - 点击 "Save" 保存配置
-               - 应用会自动重新部署
-
-            📖 详细配置指南: [STREAMLIT_CLOUD_SETUP.md](https://github.com/luoxiao6645/ai-agent/blob/main/STREAMLIT_CLOUD_SETUP.md)
-
-            ⚠️ **注意**: 请将示例API密钥替换为您的真实密钥！
-            """)
-            return None
-
-        # 创建客户端
-        if ark_api_key:
-            # 使用火山方舟API
-            client = OpenAI(
-                base_url=os.getenv("ARK_BASE_URL", "https://ark.cn-beijing.volces.com/api/v3"),
-                api_key=ark_api_key,
-            )
-            model = os.getenv("ARK_MODEL", "ep-20250506230532-w7rdw")
-        else:
-            # 使用OpenAI API
-            client = OpenAI(
-                base_url=os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"),
-                api_key=openai_api_key,
-            )
-            model = "gpt-3.5-turbo"
-
-        # 测试连接
-        try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": "你是人工智能助手"},
-                    {"role": "user", "content": "你好"}
-                ],
-                max_tokens=10
-            )
-            api_type = "火山方舟API" if ark_api_key else "OpenAI API"
-            st.success(f"✅ {api_type}连接成功")
-            return client, model
-        except Exception as e:
-            api_type = "火山方舟API" if ark_api_key else "OpenAI API"
-            st.error(f"❌ {api_type}连接测试失败: {e}")
-            st.info("请检查API密钥是否正确，以及网络连接是否正常")
-            return None, None
-
-    except ImportError:
-        st.error("❌ openai库未安装")
-        st.info("请在requirements.txt中添加: openai>=1.0.0")
+    if not result:
+        st.error("❌ 未找到API密钥")
+        StreamlitUIHelper.show_api_config_guide()
         return None
-    except Exception as e:
-        st.error(f"❌ 客户端初始化失败: {e}")
-        return None
+
+    client, model = result
+
+    # 测试连接
+    if APIClientManager.test_api_connection(client, model):
+        import os
+
+        api_type = "火山方舟API" if os.getenv("ARK_API_KEY") else "OpenAI API"
+        st.success(f"✅ {api_type}连接成功")
+        return client, model
+    else:
+        api_type = "火山方舟API" if os.getenv("ARK_API_KEY") else "OpenAI API"
+        st.error(f"❌ {api_type}连接测试失败")
+        st.info("请检查API密钥是否正确，以及网络连接是否正常")
+        return None, None
+
 
 def streamlit_chat_interface(client, model):
-    """优化的对话界面"""
-    # 初始化对话历史
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+    """优化的对话界面 - 使用重构后的聊天管理器"""
+    # 初始化对话
+    ChatManager.initialize_chat()
 
-    # 显示欢迎信息（仅在没有对话时显示）
-    if not st.session_state.messages:
-        st.markdown("""
-        ### 👋 欢迎使用智能AI助手！
-
-        我可以帮助您：
-        - 💬 回答各种问题
-        - 📝 协助写作和创作
-        - 🧮 解决计算问题
-        - 🔍 分析和总结信息
-
-        请在下方输入您的问题开始对话...
-        """)
+    # 显示欢迎信息
+    ChatManager.show_welcome_message()
 
     # 显示对话历史
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+    ChatManager.display_chat_history()
 
     # 用户输入
     if prompt := st.chat_input("请输入您的问题..."):
-        # 添加用户消息
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
+        ChatManager.process_user_input(client, model, prompt)
 
-        # 生成AI回复
-        with st.chat_message("assistant"):
-            with st.spinner("🤔 AI正在思考..."):
-                try:
-                    # 构建消息历史（保留最近8条以节省token）
-                    messages = [
-                        {"role": "system", "content": "你是一个智能、友好、有帮助的AI助手。请用中文回答问题，回答要准确、简洁、有条理。"}
-                    ]
-
-                    # 添加对话历史
-                    recent_messages = st.session_state.messages[-8:]
-                    for msg in recent_messages:
-                        messages.append({"role": msg["role"], "content": msg["content"]})
-
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=messages,
-                        max_tokens=1500,
-                        temperature=0.7
-                    )
-
-                    assistant_response = response.choices[0].message.content
-                    st.markdown(assistant_response)
-
-                    # 添加助手消息
-                    st.session_state.messages.append({"role": "assistant", "content": assistant_response})
-
-                except Exception as e:
-                    error_msg = f"抱歉，处理您的请求时出现错误: {str(e)}"
-                    st.error(error_msg)
-                    st.session_state.messages.append({"role": "assistant", "content": error_msg})
 
 def streamlit_file_interface(client, model):
-    """优化的文件处理界面"""
+    """优化的文件处理界面 - 使用重构后的文件处理器"""
     st.markdown("""
     ### 📁 文件处理
 
@@ -219,14 +84,8 @@ def streamlit_file_interface(client, model):
     )
 
     if uploaded_file is not None:
-        # 文件信息
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("📄 文件名", uploaded_file.name)
-        with col2:
-            st.metric("📊 大小", f"{uploaded_file.size / 1024:.1f} KB")
-        with col3:
-            st.metric("🏷️ 类型", uploaded_file.type.split('/')[-1].upper())
+        # 显示文件信息
+        FileProcessor.show_file_info(uploaded_file)
 
         # 处理文本文件
         if uploaded_file.type.startswith('text/') or uploaded_file.name.endswith('.md'):
@@ -247,11 +106,11 @@ def streamlit_file_interface(client, model):
 
                 with col1:
                     if st.button("📝 总结内容", use_container_width=True):
-                        process_text_file(content, client, model, "总结")
+                        FileProcessor.process_text_file(content, client, model, "总结")
 
                 with col2:
                     if st.button("🔍 分析内容", use_container_width=True):
-                        process_text_file(content, client, model, "分析")
+                        FileProcessor.process_text_file(content, client, model, "分析")
 
             except Exception as e:
                 st.error(f"无法读取文件: {e}")
@@ -270,31 +129,6 @@ def streamlit_file_interface(client, model):
         else:
             st.info("📋 文件已上传，当前版本主要支持文本文件的AI分析")
 
-def process_text_file(content, client, model, action):
-    """处理文本文件"""
-    try:
-        if action == "总结":
-            prompt = f"请总结以下文本的主要内容，要点清晰、简洁明了：\n\n{content[:2000]}"
-        else:  # 分析
-            prompt = f"请分析以下文本的内容、结构、主题和要点：\n\n{content[:2000]}"
-
-        with st.spinner(f"🤔 AI正在{action}文件内容..."):
-            response = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": f"你是一个专业的文档分析助手，请对用户提供的文本进行{action}，回答要有条理、准确、有用。"},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=1000,
-                temperature=0.3
-            )
-
-            result = response.choices[0].message.content
-            st.markdown(f"#### 📋 {action}结果")
-            st.markdown(result)
-
-    except Exception as e:
-        st.error(f"处理文件时出错: {e}")
 
 def main():
     """主函数"""
@@ -308,23 +142,8 @@ def main():
 
     client, model = result
 
-    # 简化的侧边栏
-    with st.sidebar:
-        st.header("🎛️ 控制面板")
-
-        # API状态
-        api_type = "火山方舟API" if os.getenv("ARK_API_KEY") else "OpenAI API"
-        st.success(f"✅ {api_type}已连接")
-
-        # 清除对话
-        if st.button("🗑️ 清除对话", use_container_width=True):
-            st.session_state.messages = []
-            st.rerun()
-
-        # 简化的使用说明
-        st.markdown("---")
-        st.markdown("**💬 智能对话**: 与AI助手自由交流")
-        st.markdown("**📁 文件处理**: 上传文档、图片等文件")
+    # 使用重构后的侧边栏
+    StreamlitUIHelper.show_sidebar_info()
 
     # 主界面标签页
     tab1, tab2 = st.tabs(["💬 智能对话", "📁 文件处理"])

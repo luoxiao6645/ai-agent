@@ -3,12 +3,15 @@
 """
 import asyncio
 import logging
+
 from typing import Optional, Type
 
 from langchain.tools.base import BaseTool
+
 from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
+
 
 class EmailSenderInput(BaseModel):
     """邮件发送输入模型"""
@@ -16,16 +19,18 @@ class EmailSenderInput(BaseModel):
     subject: str = Field(description="邮件主题")
     content: str = Field(description="邮件内容")
 
+
 class EmailSenderTool(BaseTool):
     """邮件工具 - 邮件发送和管理"""
-    
+
     name = "email_sender"
     description = "发送邮件"
     args_schema: Type[BaseModel] = EmailSenderInput
-    
+
+
     def _run(self, to_email: str, subject: str, content: str) -> str:
         return asyncio.run(self._arun(to_email, subject, content))
-    
+
     async def _arun(self, to_email: str, subject: str, content: str) -> str:
         try:
             # 模拟邮件发送

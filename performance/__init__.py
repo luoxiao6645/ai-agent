@@ -6,30 +6,35 @@
 
 try:
     from .cache_manager import CacheManager, get_cache_manager
+
     CACHE_AVAILABLE = True
 except ImportError:
     CACHE_AVAILABLE = False
 
 try:
     from .connection_pool import ConnectionPoolManager, get_connection_pool
+
     CONNECTION_POOL_AVAILABLE = True
 except ImportError:
     CONNECTION_POOL_AVAILABLE = False
 
 try:
     from .async_processor import AsyncProcessor, get_async_processor
+
     ASYNC_AVAILABLE = True
 except ImportError:
     ASYNC_AVAILABLE = False
 
 try:
     from .performance_monitor import PerformanceMonitor, get_performance_monitor
+
     MONITOR_AVAILABLE = True
 except ImportError:
     MONITOR_AVAILABLE = False
 
 try:
     from .optimization_config import OptimizationConfig
+
     CONFIG_AVAILABLE = True
 except ImportError:
     CONFIG_AVAILABLE = False
@@ -60,7 +65,7 @@ __description__ = "Performance optimization module for multimodal AI agent"
 # 可用性检查
 PERFORMANCE_AVAILABLE = any([
     CACHE_AVAILABLE,
-    CONNECTION_POOL_AVAILABLE, 
+    CONNECTION_POOL_AVAILABLE,
     ASYNC_AVAILABLE,
     MONITOR_AVAILABLE,
     CONFIG_AVAILABLE

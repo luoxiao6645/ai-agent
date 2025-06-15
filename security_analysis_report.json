@@ -1,0 +1,4522 @@
+{
+  "input_validation": {
+    "user_inputs": [
+      {
+        "file": "deploy.py",
+        "line": 95,
+        "code": "if input(\"是否初始化Git仓库? (y/n): \").lower() == 'y':"
+      },
+      {
+        "file": "deploy.py",
+        "line": 101,
+        "code": "choice = input(\"\\n请选择 (0-5): \").strip()"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 29,
+        "code": "choice = input(\"是否要覆盖现有配置？(y/N): \").lower()"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 68,
+        "code": "confirm = input(\"确认此密钥正确吗？(Y/n): \").lower()"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 142,
+        "code": "choice = input(\"是否要添加.env到.gitignore？(Y/n): \").lower()"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 222,
+        "code": "choice = input(\"请选择 (1/2/3): \").strip()"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 159,
+        "code": "'urllib.request', 'socket.recv', 'input()'"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 84,
+        "code": "\"open(\", \"file(\", \"input(\","
+      }
+    ],
+    "validated_inputs": [],
+    "unvalidated_inputs": [
+      {
+        "file": "deploy.py",
+        "line": 95,
+        "issue": "用户输入未验证"
+      },
+      {
+        "file": "deploy.py",
+        "line": 101,
+        "issue": "用户输入未验证"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 29,
+        "issue": "用户输入未验证"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 68,
+        "issue": "用户输入未验证"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 142,
+        "issue": "用户输入未验证"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 222,
+        "issue": "用户输入未验证"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 159,
+        "issue": "用户输入未验证"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 84,
+        "issue": "用户输入未验证"
+      }
+    ],
+    "validation_patterns": [
+      {
+        "file": "benchmark_test.py",
+        "line": 295,
+        "pattern": "validate",
+        "code": "input_validator.validate_text_input(text)"
+      },
+      {
+        "file": "config.py",
+        "line": 63,
+        "pattern": "validate",
+        "code": "def validate_config(cls) -> bool:"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 90,
+        "pattern": "escape",
+        "code": "pattern = rf'\\b{re.escape(imp)}\\b'"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 220,
+        "pattern": "escape",
+        "code": "if not re.search(rf'\\b{re.escape(module_name)}\\b',"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 75,
+        "pattern": "validate",
+        "code": "\"validated_inputs\": [],"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 76,
+        "pattern": "validate",
+        "code": "\"unvalidated_inputs\": [],"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 103,
+        "pattern": "validate",
+        "code": "['validate', 'check', 'verify', 'isinstance', 'len(']):"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 105,
+        "pattern": "validate",
+        "code": "validation_analysis[\"validated_inputs\"].append({"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 113,
+        "pattern": "validate",
+        "code": "validation_analysis[\"unvalidated_inputs\"].append({"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 120,
+        "pattern": "validate",
+        "code": "validation_keywords = ['validate', 'sanitize', 'escape', 'filter']"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 120,
+        "pattern": "sanitize",
+        "code": "validation_keywords = ['validate', 'sanitize', 'escape', 'filter']"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 120,
+        "pattern": "escape",
+        "code": "validation_keywords = ['validate', 'sanitize', 'escape', 'filter']"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 120,
+        "pattern": "filter",
+        "code": "validation_keywords = ['validate', 'sanitize', 'escape', 'filter']"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 132,
+        "pattern": "escape",
+        "code": "['html.escape', 're.sub', 'strip()', 'replace(']):"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 146,
+        "pattern": "validate",
+        "code": "print(f\"  - 已验证输入: {len(validation_analysis['validated_inputs'])}\")"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 147,
+        "pattern": "validate",
+        "code": "print(f\"  - 未验证输入: {len(validation_analysis['unvalidated_inputs'])}\")"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 422,
+        "pattern": "validate",
+        "code": "len(self.results[\"input_validation\"][\"unvalidated_inputs\"]) * 3"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 430,
+        "pattern": "validate",
+        "code": "print(f\"  - 输入验证: {len(self.results['input_validation']['validated_inputs'])}\")"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 51,
+        "pattern": "validate",
+        "code": "self.config.validate_config()"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 136,
+        "pattern": "filter",
+        "code": "async def search_memory(self, query: str, k: int = 5, filter_dict: Optional[Dict[str, Any]] = None) -> List[Document]:"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 143,
+        "pattern": "filter",
+        "code": "filter_dict: 过滤条件"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 155,
+        "pattern": "filter",
+        "code": "filter=filter_dict"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 171,
+        "pattern": "filter",
+        "code": "filter_dict={\"type\": \"conversation\"}"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 179,
+        "pattern": "filter",
+        "code": "filter_dict={\"type\": \"knowledge\"}"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 189,
+        "pattern": "filter",
+        "code": "filter_dict={\"type\": \"conversation\"}"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 302,
+        "pattern": "filter",
+        "code": "filter_dict={\"session_id\": session_id}"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 327,
+        "pattern": "filter",
+        "code": "filter_dict={\"session_id\": session_id, \"type\": \"conversation\"}"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 103,
+        "pattern": "validate",
+        "code": "plan = self._validate_and_optimize_plan(plan, user_input)"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 159,
+        "pattern": "validate",
+        "code": "def _validate_and_optimize_plan(self, plan: Dict[str, Any], user_input: str) -> Dict[str, Any]:"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 176,
+        "pattern": "validate",
+        "code": "plan[\"steps\"] = self._validate_steps(plan[\"steps\"])"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 193,
+        "pattern": "validate",
+        "code": "def _validate_steps(self, steps: List[Dict[str, Any]]) -> List[Dict[str, Any]]:"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 195,
+        "pattern": "validate",
+        "code": "validated_steps = []"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 199,
+        "pattern": "validate",
+        "code": "validated_step = {"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 205,
+        "pattern": "validate",
+        "code": "validated_steps.append(validated_step)"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 207,
+        "pattern": "validate",
+        "code": "return validated_steps"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 105,
+        "pattern": "validate",
+        "code": "async def validate_input(self, input_data: Dict[str, Any]) -> Dict[str, Any]:"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 133,
+        "pattern": "filter",
+        "code": "'filter': filter,"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 244,
+        "pattern": "validate",
+        "code": "async def validate_file(self, file_path: str) -> dict:"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 19,
+        "pattern": "filter",
+        "code": "operation: str = Field(default=\"analyze\", description=\"操作类型: analyze, resize, filter, generate\")"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 39,
+        "pattern": "filter",
+        "code": "elif operation == \"filter\":"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 67,
+        "pattern": "validate",
+        "code": "def validate_text_input(self, text: str, max_length: int = 10000,"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 101,
+        "pattern": "validate",
+        "code": "def validate_file_upload(self, uploaded_file, allowed_categories: List[str] = None) -> Tuple[bool, Dict[str, Any], str]:"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 126,
+        "pattern": "validate",
+        "code": "if not self._validate_filename(file_info['name']):"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 158,
+        "pattern": "escape",
+        "code": "text = html.escape(text)"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 172,
+        "pattern": "validate",
+        "code": "def _validate_filename(self, filename: str) -> bool:"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 107,
+        "pattern": "validate",
+        "code": "def validate_api_key(self, api_key: str, key_type: str = \"general\") -> Tuple[bool, List[str]]:"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 164,
+        "pattern": "validate",
+        "code": "is_valid, errors = self.validate_api_key(value)"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 155,
+        "pattern": "validate",
+        "code": "self.invalidate_session(session_id)"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 161,
+        "pattern": "validate",
+        "code": "def invalidate_session(self, session_id: str):"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 165,
+        "pattern": "validate",
+        "code": "self.active_sessions[session_id]['invalidated_at'] = datetime.now().isoformat()"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 312,
+        "pattern": "validate",
+        "code": "self.invalidate_session(session_id)"
+      }
+    ],
+    "sanitization_found": [
+      {
+        "file": "deploy.py",
+        "line": 101,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 216,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 195,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 222,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 88,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 91,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 156,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 161,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 165,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 51,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 77,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 82,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 86,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 204,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 209,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 57,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 59,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 93,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 95,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 100,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 104,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 115,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 163,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 168,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 177,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 226,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 273,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 276,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 277,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 280,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 119,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 123,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 165,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 174,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 218,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 221,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 141,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 265,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 73,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 139,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 156,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 215,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 274,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 226,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 292,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 88,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 101,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 132,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 169,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 246,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 330,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 348,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 349,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 97,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 184,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 49,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 52,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "line": 43,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 158,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 192,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 221,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 78,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 131,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 133,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 155,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 164,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 158,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 161,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 164,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 167,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 119,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 124,
+        "practice": "数据清理操作"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 212,
+        "practice": "数据清理操作"
+      }
+    ]
+  },
+  "auth_analysis": {
+    "auth_mechanisms": [
+      {
+        "file": "security_checker.py",
+        "line": 150,
+        "mechanism": "认证机制"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 199,
+        "mechanism": "认证机制"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 459,
+        "mechanism": "认证机制"
+      }
+    ],
+    "jwt_usage": [
+      {
+        "file": "security_checker.py",
+        "line": 156,
+        "code": "\"jwt_usage\": [],"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 171,
+        "code": "# 检查JWT使用"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 172,
+        "code": "if 'jwt' in stripped_line.lower():"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 173,
+        "code": "auth_analysis[\"jwt_usage\"].append({"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 222,
+        "code": "print(f\"  - JWT使用: {len(auth_analysis['jwt_usage'])}\")"
+      }
+    ],
+    "session_management": [
+      {
+        "file": "benchmark_test.py",
+        "line": 144,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 148,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 150,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 153,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 154,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 167,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 169,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "config.py",
+        "line": 39,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "deploy.py",
+        "line": 112,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 40,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 155,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 156,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 87,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "health_check.py",
+        "line": 32,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "health_check.py",
+        "line": 168,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 94,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 95,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 98,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 105,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 118,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 128,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 133,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 232,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 115,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 106,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 107,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 110,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 124,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 131,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 145,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 160,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 165,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 278,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 157,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 181,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 182,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 223,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 145,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 146,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 147,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 149,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 165,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 175,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 206,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 207,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 305,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 336,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 447,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 456,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 472,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 473,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 499,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 511,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 519,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 522,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 532,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 534,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 535,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 542,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 547,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 553,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 556,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 560,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 572,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 581,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 583,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 613,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 616,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 618,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 619,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 640,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 683,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 52,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 59,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 67,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 76,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 97,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 256,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 271,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 272,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 273,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 283,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 284,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 295,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 299,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 302,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 305,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 307,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 310,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 312,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 314,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 317,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 320,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 327,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 332,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 353,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 363,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 364,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 37,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 39,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 43,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 68,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 69,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 28,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 48,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 49,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 54,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 56,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 64,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 65,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 66,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 68,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 71,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 74,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 78,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 81,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 84,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 87,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 93,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 98,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 102,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 123,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 142,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 144,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 145,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/__init__.py",
+        "line": 30,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/__init__.py",
+        "line": 56,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/__init__.py",
+        "line": 57,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 86,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 147,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 148,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 149,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 151,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 158,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 159,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 160,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 252,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 254,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 257,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 258,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 259,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 270,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 224,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 234,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 236,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 238,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 239,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 241,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 121,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 211,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 213,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 216,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 217,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 218,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 54,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 188,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 189,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 190,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 192,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 214,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 218,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 222,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 264,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 267,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 268,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 281,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 285,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 306,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 384,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 401,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 28,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 32,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 37,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 40,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 51,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 52,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 57,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 67,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 70,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 96,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 106,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 108,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 109,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 118,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 119,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 121,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 122,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 123,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 125,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 128,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 130,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 131,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 133,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 136,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 137,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 140,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 142,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 145,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 147,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 150,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 153,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 154,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 155,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 158,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 161,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 163,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 164,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 165,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 168,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 169,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 184,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 186,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 187,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 198,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 204,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 209,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 210,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 228,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 230,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 233,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 237,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 261,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 263,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 264,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 266,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 267,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 268,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 275,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 277,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 278,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 280,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 283,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 286,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 288,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 292,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 295,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 298,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 301,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 303,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 306,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 307,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 308,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 309,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 311,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 312,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 313,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 314,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 316,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 319,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 323,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 324,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 327,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 329,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 330,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 352,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 354,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 358,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 363,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 366,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 368,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 371,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 385,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 388,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 390,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 39,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 40,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 42,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 43,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 58,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 59,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 67,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 72,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 73,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 78,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 103,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 105,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 106,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 154,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 189,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 238,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 248,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 262,
+        "type": "会话管理相关"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 283,
+        "type": "会话管理相关"
+      }
+    ],
+    "permission_checks": [
+      {
+        "file": "fix_client_init.py",
+        "line": 151,
+        "type": "权限检查"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 152,
+        "type": "权限检查"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 177,
+        "type": "权限检查"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 178,
+        "type": "权限检查"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 34,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 70,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 71,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 99,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 105,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 116,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 117,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 128,
+        "type": "权限检查"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 133,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 92,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 125,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 131,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 141,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 147,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 160,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 165,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 243,
+        "type": "权限检查"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 244,
+        "type": "权限检查"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 34,
+        "type": "权限检查"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 35,
+        "type": "权限检查"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 31,
+        "type": "权限检查"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 211,
+        "type": "权限检查"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 230,
+        "type": "权限检查"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 270,
+        "type": "权限检查"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 358,
+        "type": "权限检查"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 367,
+        "type": "权限检查"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 158,
+        "type": "权限检查"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 190,
+        "type": "权限检查"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 191,
+        "type": "权限检查"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 224,
+        "type": "权限检查"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 53,
+        "type": "权限检查"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 54,
+        "type": "权限检查"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 78,
+        "type": "权限检查"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 79,
+        "type": "权限检查"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 150,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 47,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 74,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 75,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 166,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 182,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 183,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 194,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 198,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 215,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 219,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 228,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 240,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 241,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 244,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 249,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 269,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 275,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 290,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 291,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 376,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 387,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 390,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 391,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 394,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 396,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 407,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 408,
+        "type": "权限检查"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 57,
+        "type": "权限检查"
+      }
+    ],
+    "auth_vulnerabilities": []
+  },
+  "encryption_analysis": {
+    "encryption_usage": [
+      {
+        "file": "security_checker.py",
+        "line": 37,
+        "library": "hashlib"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 38,
+        "library": "hashlib"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 236,
+        "library": "ssl"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 249,
+        "library": "cryptography"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 249,
+        "library": "pycrypto"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 249,
+        "library": "hashlib"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 249,
+        "library": "ssl"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 292,
+        "library": "ssl"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 293,
+        "library": "ssl"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 309,
+        "library": "ssl"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 7,
+        "library": "hashlib"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 372,
+        "library": "hashlib"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 375,
+        "library": "hashlib"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 8,
+        "library": "hashlib"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 136,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 255,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 258,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 8,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 239,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 214,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 217,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 7,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 17,
+        "library": "cryptography"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 19,
+        "library": "cryptography"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 21,
+        "library": "cryptography"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 185,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 6,
+        "library": "hashlib"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 17,
+        "library": "cryptography"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 19,
+        "library": "cryptography"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 21,
+        "library": "cryptography"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 324,
+        "library": "hashlib"
+      }
+    ],
+    "weak_encryption": [
+      {
+        "file": "benchmark_test.py",
+        "line": 58,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 237,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 246,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 274,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "main.py",
+        "line": 159,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "main.py",
+        "line": 160,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 203,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 208,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 118,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 124,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 37,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 38,
+        "algorithm": "sha1",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 259,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 259,
+        "algorithm": "sha1",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 259,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 259,
+        "algorithm": "rc4",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 333,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 338,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 344,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 349,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 355,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 360,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 366,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 371,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 382,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 387,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/__init__.py",
+        "line": 7,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 234,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 235,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 286,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 287,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 257,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 278,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 279,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 84,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 96,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 38,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 153,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 160,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 372,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 375,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 391,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 395,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 440,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 442,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 450,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 480,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 488,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 19,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 20,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 21,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 28,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/audio_processor.py",
+        "line": 18,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/audio_processor.py",
+        "line": 19,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/audio_processor.py",
+        "line": 26,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "line": 20,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "line": 27,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 20,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 21,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 22,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 29,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 24,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 25,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 26,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 33,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 33,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 34,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 41,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 113,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 33,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 34,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 41,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/email_sender.py",
+        "line": 18,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/email_sender.py",
+        "line": 19,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/email_sender.py",
+        "line": 20,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/email_sender.py",
+        "line": 27,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 20,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 21,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 22,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 29,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 18,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 19,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 26,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 207,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 461,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 466,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 473,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 632,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 638,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 656,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 663,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 668,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 18,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 19,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 20,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 27,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 20,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 21,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 28,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 63,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "performance/cache_manager.py",
+        "line": 136,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/__init__.py",
+        "line": 67,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 258,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 239,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 217,
+        "algorithm": "md5",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 148,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 156,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 180,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 288,
+        "algorithm": "des",
+        "suggestion": "使用更强的加密算法"
+      }
+    ],
+    "strong_encryption": [
+      {
+        "file": "test_system.py",
+        "line": 49,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 270,
+        "algorithm": "aes"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 270,
+        "algorithm": "sha256"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 270,
+        "algorithm": "sha512"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 270,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 270,
+        "algorithm": "ecdsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 79,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 453,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 522,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 526,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 532,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 533,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 535,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 542,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 547,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 550,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 556,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 558,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 568,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 573,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 574,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 576,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 577,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 623,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 640,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 683,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 52,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 64,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 73,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 75,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 76,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 77,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 80,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 84,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 92,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 97,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 100,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 166,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 171,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 182,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 186,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 189,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 193,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 194,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 199,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 202,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 324,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 327,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 330,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 340,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 344,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 354,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 355,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 99,
+        "algorithm": "sha256"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 185,
+        "algorithm": "sha256"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 73,
+        "algorithm": "sha256"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 324,
+        "algorithm": "sha256"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 39,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 40,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 73,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 103,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 105,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 106,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 241,
+        "algorithm": "rsa"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 248,
+        "algorithm": "rsa"
+      }
+    ],
+    "key_management": [
+      {
+        "file": "app.py",
+        "line": 44,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "app.py",
+        "line": 48,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "config.py",
+        "line": 18,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "config.py",
+        "line": 23,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "deploy.py",
+        "line": 114,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 105,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 106,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 139,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 165,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 248,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 38,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 53,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 79,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 84,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 162,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 168,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 225,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 228,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 31,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 33,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 35,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 41,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 78,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 84,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 14,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "test_system.py",
+        "line": 111,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 55,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 34,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 128,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 67,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 84,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 304,
+        "practice": "安全的密钥管理"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 67,
+        "practice": "安全的密钥管理"
+      }
+    ],
+    "ssl_tls_usage": [
+      {
+        "file": "config.py",
+        "line": 19,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "config.py",
+        "line": 25,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "deploy.py",
+        "line": 70,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "deploy.py",
+        "line": 77,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "deploy.py",
+        "line": 118,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "deploy.py",
+        "line": 124,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 52,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 57,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 144,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 170,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 54,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 80,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 85,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 66,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 77,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 23,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 236,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 249,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 292,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 293,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 309,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 60,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 90,
+        "usage": "SSL/TLS使用"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 65,
+        "usage": "SSL/TLS使用"
+      }
+    ]
+  },
+  "vulnerability_analysis": {
+    "high_risk_issues": [
+      {
+        "file": "code_quality_check.py",
+        "line": 187,
+        "issue": "eval()函数使用",
+        "code": "('eval(', '使用eval()函数'),",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 188,
+        "issue": "exec()函数使用",
+        "code": "('exec(', '使用exec()函数'),",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 189,
+        "issue": "os.system()使用",
+        "code": "('os.system(', '使用os.system()'),",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 191,
+        "issue": "shell=True使用",
+        "code": "('shell=True', 'subprocess中使用shell=True'),",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 192,
+        "issue": "pickle反序列化",
+        "code": "('pickle.loads(', '使用pickle.loads()'),",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 193,
+        "issue": "yaml.load()不安全使用",
+        "code": "('yaml.load(', '使用yaml.load()而非yaml.safe_load()'),",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 102,
+        "issue": "eval()函数使用",
+        "code": "(r'eval\\s*\\(', 'eval()函数使用', 'high'),",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 103,
+        "issue": "exec()函数使用",
+        "code": "(r'exec\\s*\\(', 'exec()函数使用', 'high'),",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 104,
+        "issue": "os.system()使用",
+        "code": "(r'os\\.system\\s*\\(', 'os.system()使用', 'high'),",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 105,
+        "issue": "shell=True使用",
+        "code": "(r'subprocess.*shell\\s*=\\s*True', 'shell=True使用', 'medium'),",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 107,
+        "issue": "yaml.load()不安全使用",
+        "code": "(r'yaml\\.load\\s*\\(', 'yaml.load()使用', 'medium'),",
+        "severity": "high"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 25,
+        "issue": "eval()函数使用",
+        "code": "(r'eval\\s*\\(', 'eval()函数使用'),",
+        "severity": "high"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 26,
+        "issue": "exec()函数使用",
+        "code": "(r'exec\\s*\\(', 'exec()函数使用'),",
+        "severity": "high"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 27,
+        "issue": "os.system()使用",
+        "code": "(r'os\\.system\\s*\\(', 'os.system()使用'),",
+        "severity": "high"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 28,
+        "issue": "shell=True使用",
+        "code": "(r'subprocess.*shell\\s*=\\s*True', 'shell=True使用'),",
+        "severity": "high"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 30,
+        "issue": "yaml.load()不安全使用",
+        "code": "(r'yaml\\.load\\s*\\((?!.*Loader)', 'yaml.load()不安全使用'),",
+        "severity": "high"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "line": 45,
+        "issue": "eval()函数使用",
+        "code": "result = eval(expression, {\"__builtins__\": {}}, allowed_names)",
+        "severity": "high"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 83,
+        "issue": "eval()函数使用",
+        "code": "\"exec(\", \"eval(\", \"compile(\",",
+        "severity": "high"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 83,
+        "issue": "exec()函数使用",
+        "code": "\"exec(\", \"eval(\", \"compile(\",",
+        "severity": "high"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 154,
+        "issue": "exec()函数使用",
+        "code": "exec(code, restricted_globals)",
+        "severity": "high"
+      }
+    ],
+    "medium_risk_issues": [
+      {
+        "file": "benchmark_test.py",
+        "line": 376,
+        "issue": "文件写入操作",
+        "code": "with open(report_file, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 94,
+        "issue": "文件写入操作",
+        "code": "with open(\".env\", \"w\", encoding=\"utf-8\") as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 225,
+        "issue": "文件写入操作",
+        "code": "with open(safe_file_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 118,
+        "issue": "文件写入操作",
+        "code": "with open(\".env\", \"w\", encoding=\"utf-8\") as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 68,
+        "issue": "文件写入操作",
+        "code": "with open(file_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 123,
+        "issue": "文件写入操作",
+        "code": "with open(file_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 181,
+        "issue": "文件写入操作",
+        "code": "with open(file_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 246,
+        "issue": "文件写入操作",
+        "code": "with open(file_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 284,
+        "issue": "文件写入操作",
+        "code": "with open(file_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 299,
+        "issue": "文件写入操作",
+        "code": "with open(\"code_quality_report.json\", \"w\", encoding=\"utf-8\") as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 335,
+        "issue": "文件写入操作",
+        "code": "with open(\"error_handling_report.json\", \"w\", encoding=\"utf-8\") as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 361,
+        "issue": "文件写入操作",
+        "code": "with open(\"logging_analysis_report.json\", \"w\", encoding=\"utf-8\") as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 381,
+        "issue": "文件写入操作",
+        "code": "with open(\"async_analysis_report.json\", \"w\", encoding=\"utf-8\") as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 448,
+        "issue": "文件写入操作",
+        "code": "with open(\"security_analysis_report.json\", \"w\", encoding=\"utf-8\") as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 422,
+        "issue": "文件写入操作",
+        "code": "with open(backup_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 67,
+        "issue": "文件写入操作",
+        "code": "with open(file_path, 'w', encoding='utf-8') as f:",
+        "severity": "medium"
+      }
+    ],
+    "low_risk_issues": [
+      {
+        "file": "app.py",
+        "line": 66,
+        "issue": "用户输入未验证",
+        "code": "if prompt := st.chat_input(\"请输入您的问题...\"):",
+        "severity": "low"
+      },
+      {
+        "file": "app.py",
+        "line": 67,
+        "issue": "用户输入未验证",
+        "code": "ChatManager.process_user_input(client, model, prompt)",
+        "severity": "low"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 295,
+        "issue": "用户输入未验证",
+        "code": "input_validator.validate_text_input(text)",
+        "severity": "low"
+      },
+      {
+        "file": "deploy.py",
+        "line": 95,
+        "issue": "用户输入未验证",
+        "code": "if input(\"是否初始化Git仓库? (y/n): \").lower() == 'y':",
+        "severity": "low"
+      },
+      {
+        "file": "deploy.py",
+        "line": 101,
+        "issue": "用户输入未验证",
+        "code": "choice = input(\"\\n请选择 (0-5): \").strip()",
+        "severity": "low"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 103,
+        "issue": "用户输入未验证",
+        "code": "if prompt := st.chat_input(\"请输入您的问题...\"):",
+        "severity": "low"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 29,
+        "issue": "用户输入未验证",
+        "code": "choice = input(\"是否要覆盖现有配置？(y/N): \").lower()",
+        "severity": "low"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 68,
+        "issue": "用户输入未验证",
+        "code": "confirm = input(\"确认此密钥正确吗？(Y/n): \").lower()",
+        "severity": "low"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 142,
+        "issue": "用户输入未验证",
+        "code": "choice = input(\"是否要添加.env到.gitignore？(Y/n): \").lower()",
+        "severity": "low"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 222,
+        "issue": "用户输入未验证",
+        "code": "choice = input(\"请选择 (1/2/3): \").strip()",
+        "severity": "low"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 129,
+        "issue": "用户输入未验证",
+        "code": "if prompt := st.chat_input(\"请输入您的问题...\"):",
+        "severity": "low"
+      },
+      {
+        "file": "test_system.py",
+        "line": 37,
+        "issue": "用户输入未验证",
+        "code": "result = await agent.process_input(test_input)",
+        "severity": "low"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 159,
+        "issue": "用户输入未验证",
+        "code": "'urllib.request', 'socket.recv', 'input()'",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 131,
+        "issue": "用户输入未验证",
+        "code": "async def process_input(self, input_data: Dict[str, Any]) -> Dict[str, Any]:",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 152,
+        "issue": "用户输入未验证",
+        "code": "processed_input = await self._preprocess_multimodal_input(input_data)",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 193,
+        "issue": "用户输入未验证",
+        "code": "async def _preprocess_multimodal_input(self, input_data: Dict[str, Any]) -> str:",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 231,
+        "issue": "用户输入未验证",
+        "code": "processed_text = await self._enhance_text_input(content)",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 248,
+        "issue": "用户输入未验证",
+        "code": "async def _enhance_text_input(self, text: str) -> str:",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 282,
+        "issue": "用户输入未验证",
+        "code": "text_enhanced = await self._enhance_text_input(fusion_content[\"text\"])",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 476,
+        "issue": "用户输入未验证",
+        "code": "processed_input = await self._preprocess_multimodal_input(input_data)",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 55,
+        "issue": "用户输入未验证",
+        "code": "async def process_input(self, input_data: Dict[str, Any]) -> str:",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 105,
+        "issue": "用户输入未验证",
+        "code": "async def validate_input(self, input_data: Dict[str, Any]) -> Dict[str, Any]:",
+        "severity": "low"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 84,
+        "issue": "用户输入未验证",
+        "code": "\"open(\", \"file(\", \"input(\",",
+        "severity": "low"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 67,
+        "issue": "用户输入未验证",
+        "code": "def validate_text_input(self, text: str, max_length: int = 10000,",
+        "severity": "low"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 120,
+        "issue": "用户输入未验证",
+        "code": "process_chat_input(user_input)",
+        "severity": "low"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 154,
+        "issue": "用户输入未验证",
+        "code": "result = asyncio.run(st.session_state.agent.process_input(input_data))",
+        "severity": "low"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 189,
+        "issue": "用户输入未验证",
+        "code": "result = asyncio.run(st.session_state.agent.process_input(input_data))",
+        "severity": "low"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 229,
+        "issue": "用户输入未验证",
+        "code": "def process_chat_input(user_input: str):",
+        "severity": "low"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 238,
+        "issue": "用户输入未验证",
+        "code": "result = asyncio.run(st.session_state.agent.process_input(input_data))",
+        "severity": "low"
+      }
+    ],
+    "sensitive_data_exposure": [],
+    "injection_risks": [
+      {
+        "file": "security_checker.py",
+        "line": 145,
+        "issue": "f-string注入风险",
+        "code": "print(f\"  - 用户输入点: {len(validation_analysis['user_inputs'])}\")"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 146,
+        "issue": "f-string注入风险",
+        "code": "print(f\"  - 已验证输入: {len(validation_analysis['validated_inputs'])}\")"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 147,
+        "issue": "f-string注入风险",
+        "code": "print(f\"  - 未验证输入: {len(validation_analysis['unvalidated_inputs'])}\")"
+      },
+      {
+        "file": "security_checker.py",
+        "line": 430,
+        "issue": "f-string注入风险",
+        "code": "print(f\"  - 输入验证: {len(self.results['input_validation']['validated_inputs'])}\")"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 73,
+        "issue": "f-string注入风险",
+        "code": "conversation_text = f\"User: {user_input}\\nAssistant: {ai_response}\""
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 93,
+        "issue": "SQL注入风险",
+        "code": "prompt = self.planning_prompt.format(user_input=user_input)"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 78,
+        "issue": "f-string注入风险",
+        "code": "return f\"不支持的输入类型: {input_type}\""
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 131,
+        "issue": "f-string注入风险",
+        "code": "result[\"error\"] = f\"不支持的输入类型: {input_type}\""
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 107,
+        "issue": "f-string注入风险",
+        "code": "st.markdown(f\"**用户:** {conv['user_input']}\")"
+      }
+    ]
+  },
+  "summary": {
+    "timestamp": "2025-06-15T18:09:29.368083",
+    "total_files": 64,
+    "security_score": 0,
+    "total_vulnerabilities": 65
+  }
+}

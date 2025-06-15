@@ -1,0 +1,232 @@
+{
+  "test_timestamp": "2025-06-15T18:22:25.412191",
+  "total_test_time": 3.1820695400238037,
+  "performance_score": 100,
+  "test_results": {
+    "cache": {
+      "write_time": 0.0001800060272216797,
+      "read_time": 7.82012939453125e-05,
+      "hit_rate": 100.0,
+      "operations_per_second": 387285.6879039705
+    },
+    "database": {
+      "total_queries": 50,
+      "simulation_time": 0.001077890396118164,
+      "optimization_report": {
+        "timestamp": "2025-06-15T18:22:22.244224",
+        "query_patterns": {
+          "total_queries": 50,
+          "successful_queries": 48,
+          "failed_queries": 2,
+          "avg_execution_time": 0.31354166666666666,
+          "slow_queries_count": 8,
+          "hourly_distribution": {
+            "18": 50
+          },
+          "operation_types": {
+            "SELECT": 34,
+            "INSERT": 8,
+            "UPDATE": 8
+          },
+          "most_accessed_tables": {
+            "users": 17,
+            "messages": 16,
+            "conversations": 9,
+            "large_table": 8
+          }
+        },
+        "performance_issues": {
+          "slow_queries_count": 8,
+          "total_slow_time": 12.159999999999998,
+          "estimated_time_savings": 7.2959999999999985
+        },
+        "top_slow_queries": [
+          {
+            "query_hash": "38811185ae9dafe8",
+            "query_text": "SELECT * FROM large_table WHERE complex_condition = ?",
+            "execution_time": 1.52,
+            "rows_affected": 5,
+            "timestamp": "2025-06-15T18:22:22.242453",
+            "success": true,
+            "error_message": null
+          },
+          {
+            "query_hash": "38811185ae9dafe8",
+            "query_text": "SELECT * FROM large_table WHERE complex_condition = ?",
+            "execution_time": 1.52,
+            "rows_affected": 1,
+            "timestamp": "2025-06-15T18:22:22.242610",
+            "success": true,
+            "error_message": null
+          },
+          {
+            "query_hash": "38811185ae9dafe8",
+            "query_text": "SELECT * FROM large_table WHERE complex_condition = ?",
+            "execution_time": 1.52,
+            "rows_affected": 7,
+            "timestamp": "2025-06-15T18:22:22.242737",
+            "success": true,
+            "error_message": null
+          },
+          {
+            "query_hash": "38811185ae9dafe8",
+            "query_text": "SELECT * FROM large_table WHERE complex_condition = ?",
+            "execution_time": 1.52,
+            "rows_affected": 3,
+            "timestamp": "2025-06-15T18:22:22.242874",
+            "success": true,
+            "error_message": null
+          },
+          {
+            "query_hash": "38811185ae9dafe8",
+            "query_text": "SELECT * FROM large_table WHERE complex_condition = ?",
+            "execution_time": 1.52,
+            "rows_affected": 9,
+            "timestamp": "2025-06-15T18:22:22.243021",
+            "success": true,
+            "error_message": null
+          }
+        ],
+        "frequent_queries": [
+          {
+            "query_hash": "ea1e6309eeeff9a6",
+            "query_text": "SELECT * FROM users WHERE id = ?",
+            "stats": {
+              "count": 9,
+              "total_time": 0.44999999999999996,
+              "avg_time": 0.049999999999999996,
+              "min_time": 0.05,
+              "max_time": 0.05,
+              "error_count": 0,
+              "last_executed": "2025-06-15T18:22:22.243448"
+            }
+          },
+          {
+            "query_hash": "9e666f1bd9439c5c",
+            "query_text": "SELECT * FROM conversations WHERE session_id = ?",
+            "stats": {
+              "count": 9,
+              "total_time": 0.7199999999999999,
+              "avg_time": 0.07999999999999999,
+              "min_time": 0.09,
+              "max_time": 0.09,
+              "error_count": 1,
+              "last_executed": "2025-06-15T18:22:22.243457"
+            }
+          },
+          {
+            "query_hash": "3678751eae3e9c85",
+            "query_text": "INSERT INTO messages (content, timestamp) VALUES (?, ?)",
+            "stats": {
+              "count": 8,
+              "total_time": 0.39999999999999997,
+              "avg_time": 0.049999999999999996,
+              "min_time": 0.05,
+              "max_time": 0.05,
+              "error_count": 0,
+              "last_executed": "2025-06-15T18:22:22.243353"
+            }
+          },
+          {
+            "query_hash": "08b4e4072d8a4df7",
+            "query_text": "UPDATE users SET last_active = ? WHERE id = ?",
+            "stats": {
+              "count": 8,
+              "total_time": 0.28,
+              "avg_time": 0.035,
+              "min_time": 0.04,
+              "max_time": 0.04,
+              "error_count": 1,
+              "last_executed": "2025-06-15T18:22:22.243358"
+            }
+          },
+          {
+            "query_hash": "b839bf3108288599",
+            "query_text": "SELECT COUNT(*) FROM messages WHERE created_at > ?",
+            "stats": {
+              "count": 8,
+              "total_time": 1.04,
+              "avg_time": 0.13,
+              "min_time": 0.13,
+              "max_time": 0.13,
+              "error_count": 0,
+              "last_executed": "2025-06-15T18:22:22.243363"
+            }
+          }
+        ],
+        "index_suggestions": [
+          {
+            "table_name": "large_table",
+            "columns": [
+              "complex_condition"
+            ],
+            "index_type": "BTREE",
+            "estimated_improvement": 0.76,
+            "reason": "Slow query optimization (current: 1.520s)"
+          }
+        ],
+        "recommendations": [
+          "发现 8 个慢查询，建议优化",
+          "建议添加 1 个索引以提升性能",
+          "有 2 个查询失败，需要检查",
+          "写操作比例较高，考虑优化写入性能"
+        ]
+      }
+    },
+    "api": {
+      "total_requests": 100,
+      "simulation_time": 0.0004057884216308594,
+      "performance_summary": {
+        "timestamp": "2025-06-15T18:22:22.249882",
+        "request_stats": {
+          "total_requests": 100,
+          "avg_response_time": 0.29999999999999993,
+          "error_rate_percent": 6.0,
+          "rate_limited_requests": 0
+        },
+        "cache_stats": {
+          "total_entries": 0,
+          "expired_entries": 0,
+          "cache_utilization": 0.0,
+          "hit_rate_percent": 0,
+          "total_hits": 0,
+          "total_misses": 0
+        },
+        "compression_stats": {
+          "compressed_responses": 0,
+          "compression_rate_percent": 0.0
+        },
+        "status_code_distribution": {
+          "200": 94,
+          "500": 6
+        },
+        "slow_endpoints_count": 0,
+        "recommendations": [
+          "缓存命中率较低，考虑优化缓存策略或增加缓存时间",
+          "响应压缩率较低，考虑启用更多内容类型的压缩",
+          "错误率较高，需要检查API稳定性"
+        ]
+      }
+    },
+    "async": {
+      "concurrent_time": 0.2011120319366455,
+      "sequential_time": 2.958240509033203,
+      "performance_improvement_percent": 93.20163349387802,
+      "tasks_completed": 20
+    },
+    "memory": {
+      "objects_created": 1000,
+      "creation_time": 0.0014934539794921875,
+      "processing_time": 0.0004963874816894531,
+      "cleanup_time": 0.00013637542724609375,
+      "total_time": 0.0021262168884277344
+    }
+  },
+  "recommendations": [],
+  "summary": {
+    "cache_ops_per_second": 387285.6879039705,
+    "api_avg_response_time_ms": 299.99999999999994,
+    "async_improvement_percent": 93.20163349387802,
+    "memory_processing_time": 0.0021262168884277344
+  }
+}

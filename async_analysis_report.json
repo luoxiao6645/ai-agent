@@ -1,0 +1,1077 @@
+{
+  "async_usage": {
+    "files_with_async": 20,
+    "async_functions": 115,
+    "await_statements": 132,
+    "async_generators": 2,
+    "async_context_managers": 7,
+    "asyncio_imports": 25,
+    "async_patterns": {
+      "gather": 0,
+      "create_task": 0,
+      "run_in_executor": 0,
+      "semaphore": 0,
+      "lock": 0,
+      "queue": 0
+    },
+    "files_analysis": {
+      "app.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "benchmark_test.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "config.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "deploy.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "fix_client_init.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "logging_config.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "privacy_protection.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "quick_start.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "secure_setup.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "simple_test.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "streamlit_app.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "test_ark_api.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "test_system.py": {
+        "has_async": true,
+        "async_functions": 3,
+        "await_statements": 8
+      },
+      "code_quality_analyzer.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "main.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "code_quality_check.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "auto_code_fixer.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "static_analysis_tool.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "logging_checker.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "multimodal_agent/__init__.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "multimodal_agent/core/__init__.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "multimodal_agent/core/agent.py": {
+        "has_async": true,
+        "async_functions": 17,
+        "await_statements": 23
+      },
+      "multimodal_agent/core/executor.py": {
+        "has_async": true,
+        "async_functions": 11,
+        "await_statements": 16
+      },
+      "multimodal_agent/core/planner.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 1
+      },
+      "multimodal_agent/multimodal/__init__.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "multimodal_agent/multimodal/audio_processor.py": {
+        "has_async": true,
+        "async_functions": 3,
+        "await_statements": 2
+      },
+      "multimodal_agent/multimodal/file_processor.py": {
+        "has_async": true,
+        "async_functions": 4,
+        "await_statements": 3
+      },
+      "multimodal_agent/multimodal/image_processor.py": {
+        "has_async": true,
+        "async_functions": 4,
+        "await_statements": 2
+      },
+      "multimodal_agent/multimodal/text_processor.py": {
+        "has_async": true,
+        "async_functions": 3,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/__init__.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/api_caller.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 2
+      },
+      "multimodal_agent/tools/audio_processor.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/calculator.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/calendar_manager.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/code_exec.py": {
+        "has_async": true,
+        "async_functions": 5,
+        "await_statements": 6
+      },
+      "multimodal_agent/tools/data_analysis.py": {
+        "has_async": true,
+        "async_functions": 5,
+        "await_statements": 4
+      },
+      "multimodal_agent/tools/document.py": {
+        "has_async": true,
+        "async_functions": 6,
+        "await_statements": 4
+      },
+      "multimodal_agent/tools/email_sender.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/file_manager.py": {
+        "has_async": true,
+        "async_functions": 5,
+        "await_statements": 4
+      },
+      "multimodal_agent/tools/image_processor.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/translator.py": {
+        "has_async": true,
+        "async_functions": 1,
+        "await_statements": 0
+      },
+      "multimodal_agent/tools/web_search.py": {
+        "has_async": true,
+        "async_functions": 4,
+        "await_statements": 5
+      },
+      "performance/__init__.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "security/__init__.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "security/exception_handler.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "security/logging_system.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "security/secrets_manager.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "security/session_manager.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "ui/__init__.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      },
+      "ui/streamlit_app.py": {
+        "has_async": false,
+        "async_functions": 0,
+        "await_statements": 0
+      }
+    }
+  },
+  "correctness_analysis": {
+    "correct_usage": [],
+    "incorrect_usage": [],
+    "missing_await": [
+      {
+        "file": "app.py",
+        "line": 93,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 95,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 95,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 215,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 289,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 305,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 306,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 226,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 304,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 151,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 119,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 138,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 145,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 47,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 60,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 88,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 101,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 197,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 69,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 122,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 41,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 108,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 150,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 199,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 152,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 204,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 267,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 182,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 247,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 285,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 47,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 201,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 51,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 133,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 198,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 259,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 64,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 133,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 209,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 268,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 58,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 137,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 221,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 288,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 118,
+        "issue": "可能需要await的调用: arun",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 131,
+        "issue": "可能需要await的调用: arun",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 145,
+        "issue": "可能需要await的调用: arun",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 159,
+        "issue": "可能需要await的调用: arun",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 173,
+        "issue": "可能需要await的调用: arun",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 187,
+        "issue": "可能需要await的调用: arun",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 74,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 178,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 219,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 58,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 68,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 239,
+        "issue": "可能需要await的调用: arun",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 143,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 180,
+        "issue": "可能需要await的调用: write",
+        "suggestion": "检查是否需要添加await"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 225,
+        "issue": "可能需要await的调用: read",
+        "suggestion": "检查是否需要添加await"
+      }
+    ],
+    "unnecessary_async": [
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "function": "_enhance_text_input",
+        "line": 248,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "function": "_generate_fallback_response",
+        "line": 398,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "function": "_extract_topics",
+        "line": 587,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "function": "add_tool",
+        "line": 656,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "function": "remove_tool",
+        "line": 668,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "function": "_execute_simple_task",
+        "line": 105,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "function": "_execute_fallback",
+        "line": 209,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "function": "clear_memory",
+        "line": 218,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "function": "_extract_topics_from_content",
+        "line": 366,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "function": "_process_audio_file",
+        "line": 44,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "function": "_process_audio_data",
+        "line": 66,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "function": "_process_text_file",
+        "line": 70,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "function": "_process_json_file",
+        "line": 86,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "function": "_process_image_file",
+        "line": 44,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "function": "_process_image_data",
+        "line": 66,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "function": "analyze_image",
+        "line": 77,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "function": "validate_input",
+        "line": 105,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "function": "_analyze_cross_modal_relations",
+        "line": 302,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "function": "_generate_fusion_summary",
+        "line": 322,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "function": "_calculate_attention_weights",
+        "line": 338,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "function": "_get_cached_result",
+        "line": 377,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "function": "process",
+        "line": 21,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "function": "extract_keywords",
+        "line": 56,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "function": "summarize",
+        "line": 64,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/audio_processor.py",
+        "function": "_arun",
+        "line": 33,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "function": "_arun",
+        "line": 34,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "function": "_arun",
+        "line": 36,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "function": "_execute_python",
+        "line": 113,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "function": "_execute_javascript",
+        "line": 166,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "function": "_execute_bash",
+        "line": 207,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "function": "_parse_data",
+        "line": 74,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "function": "_basic_analysis",
+        "line": 95,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "function": "_statistical_analysis",
+        "line": 118,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "function": "_create_visualization",
+        "line": 139,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "function": "_parse_pdf",
+        "line": 103,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "function": "_parse_docx",
+        "line": 142,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "function": "_parse_xlsx",
+        "line": 172,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "function": "_parse_text",
+        "line": 210,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "function": "validate_file",
+        "line": 244,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/email_sender.py",
+        "function": "_arun",
+        "line": 34,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "function": "_read_file",
+        "line": 51,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "function": "_write_file",
+        "line": 63,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "function": "_list_directory",
+        "line": 73,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "function": "_delete_file",
+        "line": 84,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "function": "_arun",
+        "line": 33,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "function": "suggest_tools",
+        "line": 632,
+        "issue": "异步函数中没有await语句"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "function": "_arun",
+        "line": 34,
+        "issue": "异步函数中没有await语句"
+      }
+    ],
+    "blocking_calls_in_async": []
+  },
+  "safety_analysis": {
+    "shared_state_access": [],
+    "race_condition_risks": [],
+    "proper_synchronization": [
+      {
+        "file": "async_checker.py",
+        "line": 238,
+        "practice": "使用了同步原语: asyncio.Lock"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 238,
+        "practice": "使用了同步原语: asyncio.Semaphore"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 238,
+        "practice": "使用了同步原语: asyncio.Event"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 77,
+        "practice": "使用了同步原语: asyncio.Semaphore"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 78,
+        "practice": "使用了同步原语: asyncio.Lock"
+      }
+    ],
+    "resource_management": [
+      {
+        "file": "async_checker.py",
+        "line": 248,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 261,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 37,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 39,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 43,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 342,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 343,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 68,
+        "practice": "使用了异步上下文管理器"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 69,
+        "practice": "使用了异步上下文管理器"
+      }
+    ],
+    "deadlock_risks": []
+  },
+  "performance_analysis": {
+    "good_patterns": [
+      {
+        "file": "async_checker.py",
+        "line": 295,
+        "pattern": "使用gather进行并发执行"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 302,
+        "pattern": "使用create_task创建任务"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 315,
+        "pattern": "使用gather进行并发执行"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 223,
+        "pattern": "使用gather进行并发执行"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 495,
+        "pattern": "使用gather进行并发执行"
+      }
+    ],
+    "anti_patterns": [],
+    "optimization_opportunities": [
+      {
+        "file": "async_checker.py",
+        "line": 47,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 169,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "async_checker.py",
+        "line": 319,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 89,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 122,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 150,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 208,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 448,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 356,
+        "opportunity": "使用了executor，检查是否可以使用纯异步版本"
+      }
+    ]
+  },
+  "summary": {
+    "timestamp": "2025-06-15T18:08:17.925135",
+    "total_files": 63,
+    "async_coverage": 31.746031746031743,
+    "total_issues": 106
+  }
+}

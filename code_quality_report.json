@@ -1,0 +1,3636 @@
+{
+  "complexity": {
+    "total_lines": 12663,
+    "total_functions": 376,
+    "complex_functions": [
+      {
+        "file": "app.py",
+        "function": "streamlit_file_interface",
+        "length": 61,
+        "line": 70
+      },
+      {
+        "file": "benchmark_test.py",
+        "function": "benchmark_connection_pool",
+        "length": 57,
+        "line": 133
+      },
+      {
+        "file": "benchmark_test.py",
+        "function": "benchmark_system_performance",
+        "length": 55,
+        "line": 307
+      },
+      {
+        "file": "deploy.py",
+        "function": "main",
+        "length": 51,
+        "line": 82
+      },
+      {
+        "file": "fix_client_init.py",
+        "function": "create_env_file",
+        "length": 56,
+        "line": 43
+      },
+      {
+        "file": "fix_client_init.py",
+        "function": "test_api_connection",
+        "length": 68,
+        "line": 131
+      },
+      {
+        "file": "privacy_protection.py",
+        "function": "__init__",
+        "length": 58,
+        "line": 21
+      },
+      {
+        "file": "quick_start.py",
+        "function": "main",
+        "length": 59,
+        "line": 199
+      },
+      {
+        "file": "secure_setup.py",
+        "function": "create_env_file",
+        "length": 54,
+        "line": 73
+      },
+      {
+        "file": "streamlit_app.py",
+        "function": "init_client",
+        "length": 52,
+        "line": 49
+      },
+      {
+        "file": "streamlit_app.py",
+        "function": "chat_interface",
+        "length": 63,
+        "line": 103
+      },
+      {
+        "file": "streamlit_app.py",
+        "function": "file_interface",
+        "length": 61,
+        "line": 168
+      },
+      {
+        "file": "main.py",
+        "function": "main",
+        "length": 90,
+        "line": 156
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "function": "fix_long_lines",
+        "length": 54,
+        "line": 78
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "function": "remove_unused_imports",
+        "length": 57,
+        "line": 133
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "function": "add_missing_docstrings",
+        "length": 66,
+        "line": 191
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "function": "analyze_complexity",
+        "length": 61,
+        "line": 35
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "function": "check_security_issues",
+        "length": 54,
+        "line": 97
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "function": "get_memory_stats",
+        "length": 53,
+        "line": 241
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "function": "_create_planning_prompt",
+        "length": 51,
+        "line": 29
+      },
+      {
+        "file": "security/input_validator.py",
+        "function": "validate_file_upload",
+        "length": 51,
+        "line": 101
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "function": "store_secret",
+        "length": 52,
+        "line": 148
+      }
+    ],
+    "by_file": {
+      "app.py": {
+        "lines": 159,
+        "functions": 4,
+        "complex_functions": [
+          {
+            "file": "app.py",
+            "function": "streamlit_file_interface",
+            "length": 61,
+            "line": 70
+          }
+        ]
+      },
+      "benchmark_test.py": {
+        "lines": 453,
+        "functions": 17,
+        "complex_functions": [
+          {
+            "file": "benchmark_test.py",
+            "function": "benchmark_connection_pool",
+            "length": 57,
+            "line": 133
+          },
+          {
+            "file": "benchmark_test.py",
+            "function": "benchmark_system_performance",
+            "length": 55,
+            "line": 307
+          }
+        ]
+      },
+      "config.py": {
+        "lines": 83,
+        "functions": 2,
+        "complex_functions": []
+      },
+      "deploy.py": {
+        "lines": 136,
+        "functions": 6,
+        "complex_functions": [
+          {
+            "file": "deploy.py",
+            "function": "main",
+            "length": 51,
+            "line": 82
+          }
+        ]
+      },
+      "enhanced_app.py": {
+        "lines": 320,
+        "functions": 11,
+        "complex_functions": []
+      },
+      "fix_client_init.py": {
+        "lines": 317,
+        "functions": 8,
+        "complex_functions": [
+          {
+            "file": "fix_client_init.py",
+            "function": "create_env_file",
+            "length": 56,
+            "line": 43
+          },
+          {
+            "file": "fix_client_init.py",
+            "function": "test_api_connection",
+            "length": 68,
+            "line": 131
+          }
+        ]
+      },
+      "health_check.py": {
+        "lines": 382,
+        "functions": 14,
+        "complex_functions": []
+      },
+      "logging_config.py": {
+        "lines": 63,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "privacy_protection.py": {
+        "lines": 363,
+        "functions": 11,
+        "complex_functions": [
+          {
+            "file": "privacy_protection.py",
+            "function": "__init__",
+            "length": 58,
+            "line": 21
+          }
+        ]
+      },
+      "quick_start.py": {
+        "lines": 261,
+        "functions": 6,
+        "complex_functions": [
+          {
+            "file": "quick_start.py",
+            "function": "main",
+            "length": 59,
+            "line": 199
+          }
+        ]
+      },
+      "secure_setup.py": {
+        "lines": 256,
+        "functions": 8,
+        "complex_functions": [
+          {
+            "file": "secure_setup.py",
+            "function": "create_env_file",
+            "length": 54,
+            "line": 73
+          }
+        ]
+      },
+      "simple_test.py": {
+        "lines": 186,
+        "functions": 6,
+        "complex_functions": []
+      },
+      "streamlit_app.py": {
+        "lines": 301,
+        "functions": 6,
+        "complex_functions": [
+          {
+            "file": "streamlit_app.py",
+            "function": "init_client",
+            "length": 52,
+            "line": 49
+          },
+          {
+            "file": "streamlit_app.py",
+            "function": "chat_interface",
+            "length": 63,
+            "line": 103
+          },
+          {
+            "file": "streamlit_app.py",
+            "function": "file_interface",
+            "length": 61,
+            "line": 168
+          }
+        ]
+      },
+      "test_ark_api.py": {
+        "lines": 78,
+        "functions": 2,
+        "complex_functions": []
+      },
+      "test_system.py": {
+        "lines": 154,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "code_quality_analyzer.py": {
+        "lines": 280,
+        "functions": 9,
+        "complex_functions": []
+      },
+      "main.py": {
+        "lines": 249,
+        "functions": 8,
+        "complex_functions": [
+          {
+            "file": "main.py",
+            "function": "main",
+            "length": 90,
+            "line": 156
+          }
+        ]
+      },
+      "code_quality_check.py": {
+        "lines": 323,
+        "functions": 11,
+        "complex_functions": []
+      },
+      "auto_code_fixer.py": {
+        "lines": 327,
+        "functions": 9,
+        "complex_functions": [
+          {
+            "file": "auto_code_fixer.py",
+            "function": "fix_long_lines",
+            "length": 54,
+            "line": 78
+          },
+          {
+            "file": "auto_code_fixer.py",
+            "function": "remove_unused_imports",
+            "length": 57,
+            "line": 133
+          },
+          {
+            "file": "auto_code_fixer.py",
+            "function": "add_missing_docstrings",
+            "length": 66,
+            "line": 191
+          }
+        ]
+      },
+      "static_analysis_tool.py": {
+        "lines": 321,
+        "functions": 10,
+        "complex_functions": [
+          {
+            "file": "static_analysis_tool.py",
+            "function": "analyze_complexity",
+            "length": 61,
+            "line": 35
+          },
+          {
+            "file": "static_analysis_tool.py",
+            "function": "check_security_issues",
+            "length": 54,
+            "line": 97
+          }
+        ]
+      },
+      "multimodal_agent/__init__.py": {
+        "lines": 8,
+        "functions": 0,
+        "complex_functions": []
+      },
+      "multimodal_agent/core/__init__.py": {
+        "lines": 4,
+        "functions": 0,
+        "complex_functions": []
+      },
+      "multimodal_agent/core/agent.py": {
+        "lines": 693,
+        "functions": 5,
+        "complex_functions": []
+      },
+      "multimodal_agent/core/executor.py": {
+        "lines": 257,
+        "functions": 7,
+        "complex_functions": []
+      },
+      "multimodal_agent/core/memory.py": {
+        "lines": 459,
+        "functions": 2,
+        "complex_functions": [
+          {
+            "file": "multimodal_agent/core/memory.py",
+            "function": "get_memory_stats",
+            "length": 53,
+            "line": 241
+          }
+        ]
+      },
+      "multimodal_agent/core/planner.py": {
+        "lines": 245,
+        "functions": 9,
+        "complex_functions": [
+          {
+            "file": "multimodal_agent/core/planner.py",
+            "function": "_create_planning_prompt",
+            "length": 51,
+            "line": 29
+          }
+        ]
+      },
+      "multimodal_agent/multimodal/__init__.py": {
+        "lines": 8,
+        "functions": 0,
+        "complex_functions": []
+      },
+      "multimodal_agent/multimodal/audio_processor.py": {
+        "lines": 76,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/multimodal/file_processor.py": {
+        "lines": 109,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/multimodal/image_processor.py": {
+        "lines": 102,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/multimodal/processor.py": {
+        "lines": 499,
+        "functions": 8,
+        "complex_functions": []
+      },
+      "multimodal_agent/multimodal/text_processor.py": {
+        "lines": 79,
+        "functions": 2,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/__init__.py": {
+        "lines": 8,
+        "functions": 0,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/api_caller.py": {
+        "lines": 50,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/audio_processor.py": {
+        "lines": 45,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/calculator.py": {
+        "lines": 49,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/calendar_manager.py": {
+        "lines": 48,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/code_exec.py": {
+        "lines": 266,
+        "functions": 4,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/data_analysis.py": {
+        "lines": 167,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/document.py": {
+        "lines": 281,
+        "functions": 4,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/email_sender.py": {
+        "lines": 40,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/file_manager.py": {
+        "lines": 94,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/image_processor.py": {
+        "lines": 47,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/tool_manager.py": {
+        "lines": 718,
+        "functions": 23,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/translator.py": {
+        "lines": 40,
+        "functions": 1,
+        "complex_functions": []
+      },
+      "multimodal_agent/tools/web_search.py": {
+        "lines": 141,
+        "functions": 5,
+        "complex_functions": []
+      },
+      "performance/__init__.py": {
+        "lines": 73,
+        "functions": 0,
+        "complex_functions": []
+      },
+      "performance/async_processor.py": {
+        "lines": 261,
+        "functions": 12,
+        "complex_functions": []
+      },
+      "performance/cache_manager.py": {
+        "lines": 164,
+        "functions": 11,
+        "complex_functions": []
+      },
+      "performance/connection_pool.py": {
+        "lines": 219,
+        "functions": 14,
+        "complex_functions": []
+      },
+      "performance/optimization_config.py": {
+        "lines": 137,
+        "functions": 3,
+        "complex_functions": []
+      },
+      "performance/performance_monitor.py": {
+        "lines": 203,
+        "functions": 11,
+        "complex_functions": []
+      },
+      "security/__init__.py": {
+        "lines": 68,
+        "functions": 0,
+        "complex_functions": []
+      },
+      "security/exception_handler.py": {
+        "lines": 314,
+        "functions": 20,
+        "complex_functions": []
+      },
+      "security/input_validator.py": {
+        "lines": 273,
+        "functions": 13,
+        "complex_functions": [
+          {
+            "file": "security/input_validator.py",
+            "function": "validate_file_upload",
+            "length": 51,
+            "line": 101
+          }
+        ]
+      },
+      "security/logging_system.py": {
+        "lines": 297,
+        "functions": 16,
+        "complex_functions": []
+      },
+      "security/secrets_manager.py": {
+        "lines": 419,
+        "functions": 16,
+        "complex_functions": [
+          {
+            "file": "security/secrets_manager.py",
+            "function": "store_secret",
+            "length": 52,
+            "line": 148
+          }
+        ]
+      },
+      "security/session_manager.py": {
+        "lines": 391,
+        "functions": 20,
+        "complex_functions": []
+      },
+      "ui/__init__.py": {
+        "lines": 4,
+        "functions": 0,
+        "complex_functions": []
+      },
+      "ui/streamlit_app.py": {
+        "lines": 295,
+        "functions": 9,
+        "complex_functions": []
+      }
+    }
+  },
+  "security": {
+    "issues": [
+      {
+        "file": "code_quality_check.py",
+        "line": 187,
+        "code": "('eval(', '使用eval()函数'),",
+        "issue": "eval()函数使用",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 188,
+        "code": "('exec(', '使用exec()函数'),",
+        "issue": "exec()函数使用",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 189,
+        "code": "('os.system(', '使用os.system()'),",
+        "issue": "os.system()使用",
+        "severity": "high"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 191,
+        "code": "('shell=True', 'subprocess中使用shell=True'),",
+        "issue": "shell=True使用",
+        "severity": "medium"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 192,
+        "code": "('pickle.loads(', '使用pickle.loads()'),",
+        "issue": "pickle反序列化",
+        "severity": "medium"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 193,
+        "code": "('yaml.load(', '使用yaml.load()而非yaml.safe_load()'),",
+        "issue": "yaml.load()使用",
+        "severity": "medium"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 102,
+        "code": "(r'eval\\s*\\(', 'eval()函数使用', 'high'),",
+        "issue": "eval()函数使用",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 103,
+        "code": "(r'exec\\s*\\(', 'exec()函数使用', 'high'),",
+        "issue": "exec()函数使用",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 104,
+        "code": "(r'os\\.system\\s*\\(', 'os.system()使用', 'high'),",
+        "issue": "os.system()使用",
+        "severity": "high"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 105,
+        "code": "(r'subprocess.*shell\\s*=\\s*True', 'shell=True使用', 'medium'),",
+        "issue": "shell=True使用",
+        "severity": "medium"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 107,
+        "code": "(r'yaml\\.load\\s*\\(', 'yaml.load()使用', 'medium'),",
+        "issue": "yaml.load()使用",
+        "severity": "medium"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "line": 45,
+        "code": "result = eval(expression, {\"__builtins__\": {}}, allowed_names)",
+        "issue": "eval()函数使用",
+        "severity": "high"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 83,
+        "code": "\"exec(\", \"eval(\", \"compile(\",",
+        "issue": "eval()函数使用",
+        "severity": "high"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 83,
+        "code": "\"exec(\", \"eval(\", \"compile(\",",
+        "issue": "exec()函数使用",
+        "severity": "high"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 154,
+        "code": "exec(code, restricted_globals)",
+        "issue": "exec()函数使用",
+        "severity": "high"
+      }
+    ],
+    "by_severity": {
+      "high": [
+        {
+          "file": "code_quality_check.py",
+          "line": 187,
+          "code": "('eval(', '使用eval()函数'),",
+          "issue": "eval()函数使用",
+          "severity": "high"
+        },
+        {
+          "file": "code_quality_check.py",
+          "line": 188,
+          "code": "('exec(', '使用exec()函数'),",
+          "issue": "exec()函数使用",
+          "severity": "high"
+        },
+        {
+          "file": "code_quality_check.py",
+          "line": 189,
+          "code": "('os.system(', '使用os.system()'),",
+          "issue": "os.system()使用",
+          "severity": "high"
+        },
+        {
+          "file": "static_analysis_tool.py",
+          "line": 102,
+          "code": "(r'eval\\s*\\(', 'eval()函数使用', 'high'),",
+          "issue": "eval()函数使用",
+          "severity": "high"
+        },
+        {
+          "file": "static_analysis_tool.py",
+          "line": 103,
+          "code": "(r'exec\\s*\\(', 'exec()函数使用', 'high'),",
+          "issue": "exec()函数使用",
+          "severity": "high"
+        },
+        {
+          "file": "static_analysis_tool.py",
+          "line": 104,
+          "code": "(r'os\\.system\\s*\\(', 'os.system()使用', 'high'),",
+          "issue": "os.system()使用",
+          "severity": "high"
+        },
+        {
+          "file": "multimodal_agent/tools/calculator.py",
+          "line": 45,
+          "code": "result = eval(expression, {\"__builtins__\": {}}, allowed_names)",
+          "issue": "eval()函数使用",
+          "severity": "high"
+        },
+        {
+          "file": "multimodal_agent/tools/code_exec.py",
+          "line": 83,
+          "code": "\"exec(\", \"eval(\", \"compile(\",",
+          "issue": "eval()函数使用",
+          "severity": "high"
+        },
+        {
+          "file": "multimodal_agent/tools/code_exec.py",
+          "line": 83,
+          "code": "\"exec(\", \"eval(\", \"compile(\",",
+          "issue": "exec()函数使用",
+          "severity": "high"
+        },
+        {
+          "file": "multimodal_agent/tools/code_exec.py",
+          "line": 154,
+          "code": "exec(code, restricted_globals)",
+          "issue": "exec()函数使用",
+          "severity": "high"
+        }
+      ],
+      "medium": [
+        {
+          "file": "code_quality_check.py",
+          "line": 191,
+          "code": "('shell=True', 'subprocess中使用shell=True'),",
+          "issue": "shell=True使用",
+          "severity": "medium"
+        },
+        {
+          "file": "code_quality_check.py",
+          "line": 192,
+          "code": "('pickle.loads(', '使用pickle.loads()'),",
+          "issue": "pickle反序列化",
+          "severity": "medium"
+        },
+        {
+          "file": "code_quality_check.py",
+          "line": 193,
+          "code": "('yaml.load(', '使用yaml.load()而非yaml.safe_load()'),",
+          "issue": "yaml.load()使用",
+          "severity": "medium"
+        },
+        {
+          "file": "static_analysis_tool.py",
+          "line": 105,
+          "code": "(r'subprocess.*shell\\s*=\\s*True', 'shell=True使用', 'medium'),",
+          "issue": "shell=True使用",
+          "severity": "medium"
+        },
+        {
+          "file": "static_analysis_tool.py",
+          "line": 107,
+          "code": "(r'yaml\\.load\\s*\\(', 'yaml.load()使用', 'medium'),",
+          "issue": "yaml.load()使用",
+          "severity": "medium"
+        }
+      ],
+      "low": []
+    },
+    "summary": {
+      "total": 15,
+      "high": 10,
+      "medium": 5,
+      "low": 0
+    }
+  },
+  "style": {
+    "issues": [
+      {
+        "file": "app.py",
+        "line": 98,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 70,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 71,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 72,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 75,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 176,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 301,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 392,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 393,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 400,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 415,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 416,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 428,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 435,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "config.py",
+        "line": 19,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "config.py",
+        "line": 23,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "config.py",
+        "line": 24,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "config.py",
+        "line": 25,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "config.py",
+        "line": 58,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "config.py",
+        "line": 59,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "deploy.py",
+        "line": 23,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 111,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 140,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 144,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 96,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 100,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 105,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 108,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 130,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 135,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 144,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 146,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 147,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 151,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 154,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 174,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 179,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 180,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 183,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 188,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 209,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "health_check.py",
+        "line": 344,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 195,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 39,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 54,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 128,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 133,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 225,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 228,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 30,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 40,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 77,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 141,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 147,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 160,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 165,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 195,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 202,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 243,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 17,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 24,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 28,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 33,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 35,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 39,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 48,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 53,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 61,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 65,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 70,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 72,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 84,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 88,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 91,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 93,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 96,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 99,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 103,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 105,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 110,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 119,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 123,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 136,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 139,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 142,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 146,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 148,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 153,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 163,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 171,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 174,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 177,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 183,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 190,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 198,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 204,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 206,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 207,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 213,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 223,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 227,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 232,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 239,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 248,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 255,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 257,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 264,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 267,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 270,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 275,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 16,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 21,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 25,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 29,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 31,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 35,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 37,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 42,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 44,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 51,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 57,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 60,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 63,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 67,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 69,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 74,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 84,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 92,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 95,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 98,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 102,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 104,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 109,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 111,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 116,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 124,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 134,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 137,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 140,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 144,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 146,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 151,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 153,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 163,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 168,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 172,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 175,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 178,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 182,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 184,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 195,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 201,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 211,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 214,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 217,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 221,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 224,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 229,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 233,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 237,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 238,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 240,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 243,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 244,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 249,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 252,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 258,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 264,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 271,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 272,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 275,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 288,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 290,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 292,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 302,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 309,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 312,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 15,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 20,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 24,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 31,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 35,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 37,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 41,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 43,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 48,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 52,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 60,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 62,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 65,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 72,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 75,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 77,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 81,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 83,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 88,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 91,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 101,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 104,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 113,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 115,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 118,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 120,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 127,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 130,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 132,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 136,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 138,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 142,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 148,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 153,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 157,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 161,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 166,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 172,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 178,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 185,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 188,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 190,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 194,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 196,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 201,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 205,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 208,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 211,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 221,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 226,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 228,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 233,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 238,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 241,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 244,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 248,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 252,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 255,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 257,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 261,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 263,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 268,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 270,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 274,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 278,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 281,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 288,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 291,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 293,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 298,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 300,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 307,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 309,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 316,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 322,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 17,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 22,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 26,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 28,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 32,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 34,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 38,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 43,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 48,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 51,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 54,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 57,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 62,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 73,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 79,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 82,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 85,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 92,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 96,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 100,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 109,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 111,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 116,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 119,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 127,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 130,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 135,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 146,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 151,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 155,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 157,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 162,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 172,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 181,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 184,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 189,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 191,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 195,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 197,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 202,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 205,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 214,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 220,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 227,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 230,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 233,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 238,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 240,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 244,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 248,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 254,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 258,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 262,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 264,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 268,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 275,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 282,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 288,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 291,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 298,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 301,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 303,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 305,
+        "issue": "行尾有多余空格",
+        "type": "trailing_whitespace"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 87,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 158,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 162,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 274,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 286,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 290,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 299,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 306,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 328,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 335,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 339,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 349,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 368,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 447,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 472,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 491,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 511,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 522,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 574,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 576,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 577,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 82,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 180,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 195,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 200,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 232,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 245,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 52,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 103,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 136,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 268,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 278,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 280,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 307,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 310,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 344,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 348,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 387,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 159,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 19,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 138,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 216,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 218,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 265,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 322,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 338,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 412,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 430,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 444,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 484,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 35,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/audio_processor.py",
+        "line": 19,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 33,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 36,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 25,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 50,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 34,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 34,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 196,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 197,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 33,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 36,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 19,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 222,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 323,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 346,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 407,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 429,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 445,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 447,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 461,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 480,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 517,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 534,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 559,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 573,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 600,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 601,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 632,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 633,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 658,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 700,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 31,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 34,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 127,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 247,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 112,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 131,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 135,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 106,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 107,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 108,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 111,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 112,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 113,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 116,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 117,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 120,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 121,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 125,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 126,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 127,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "performance/optimization_config.py",
+        "line": 130,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 96,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 164,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 170,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 186,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 195,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 204,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 213,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 222,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 231,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 258,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 270,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 101,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 195,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 200,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/input_validator.py",
+        "line": 239,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 154,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 217,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 285,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 107,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 134,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 166,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 184,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 215,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 244,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 249,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 326,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 408,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 165,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 330,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 359,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 371,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 106,
+        "issue": "行长度超过88字符",
+        "type": "line_length"
+      }
+    ],
+    "total": 450
+  },
+  "imports": {
+    "issues": [
+      {
+        "file": "benchmark_test.py",
+        "import": "asyncio",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "enhanced_app.py",
+        "import": "threading",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "quick_start.py",
+        "import": "streamlit",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "streamlit_app.py",
+        "import": "streamlit",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "import": "os",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "import": "sys",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "import": "os",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "import": "asyncio",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "import": "asyncio",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "import": "asyncio",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "import": "asyncio",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "import": "asyncio",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "import": "asyncio",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "import": "seaborn",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "import": "shutil",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "import": "streamlit",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "security/input_validator.py",
+        "import": "mimetypes",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "security/input_validator.py",
+        "import": "streamlit",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "security/logging_system.py",
+        "import": "streamlit",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "import": "streamlit",
+        "issue": "可能未使用的导入"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "import": "streamlit",
+        "issue": "可能未使用的导入"
+      }
+    ],
+    "total": 21
+  },
+  "summary": {
+    "timestamp": "2025-06-15T18:05:01.033026",
+    "quality_score": 0,
+    "total_files": 60
+  }
+}

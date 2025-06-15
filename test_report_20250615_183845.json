@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-06-15T18:38:45.637530",
+  "duration_seconds": 0.18322277069091797,
+  "overall_success": true,
+  "test_statistics": {
+    "total_tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "success_rate": 100.0
+  },
+  "sync_tests": {
+    "success": true,
+    "output": "============================= test session starts ==============================\nplatform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0 -- /usr/bin/python\ncachedir: .pytest_cache\nrootdir: /mnt/persist/workspace, configfile: pytest.ini\ncollecting ... collected 3 items\n\ntests/unit/test_simple_agent.py::TestSimpleAgent::test_session_management PASSED [ 33%]\ntests/unit/test_simple_agent.py::TestSimpleAgent::test_conversation_history PASSED [ 66%]\ntests/unit/test_simple_agent.py::TestSimpleAgent::test_agent_initialization PASSED [100%]\n\n=============================== warnings summary ===============================\ntests/unit/test_simple_agent.py:47\n  /mnt/persist/workspace/tests/unit/test_simple_agent.py:47: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html\n    @pytest.mark.unit\n\ntests/unit/test_simple_agent.py:56\n  /mnt/persist/workspace/tests/unit/test_simple_agent.py:56: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html\n    @pytest.mark.asyncio\n\ntests/unit/test_simple_agent.py:63\n  /mnt/persist/workspace/tests/unit/test_simple_agent.py:63: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html\n    @pytest.mark.asyncio\n\ntests/unit/test_simple_agent.py:69\n  /mnt/persist/workspace/tests/unit/test_simple_agent.py:69: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html\n    @pytest.mark.asyncio\n\ntests/unit/test_simple_agent.py:75\n  /mnt/persist/workspace/tests/unit/test_simple_agent.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html\n    @pytest.mark.asyncio\n\ntests/unit/test_simple_agent.py:82\n  /mnt/persist/workspace/tests/unit/test_simple_agent.py:82: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html\n    @pytest.mark.asyncio\n\ntests/unit/test_simple_agent.py:119\n  /mnt/persist/workspace/tests/unit/test_simple_agent.py:119: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/mark.html\n    @pytest.mark.asyncio\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n======================== 3 passed, 7 warnings in 0.03s =========================\n"
+  },
+  "performance_tests": {
+    "success": true,
+    "cache": {
+      "operations_per_second": 3255183.546759798,
+      "write_time": 0.0004534721374511719,
+      "read_time": 0.0001609325408935547,
+      "iterations": 1000
+    },
+    "memory": {
+      "processing_time": 0.0014317035675048828,
+      "objects_per_second": 698468.60949209,
+      "object_count": 1000
+    },
+    "api": {
+      "avg_response_time_ms": 0.004608631134033203,
+      "min_response_time_ms": 0.003814697265625,
+      "max_response_time_ms": 0.034809112548828125,
+      "request_count": 100
+    }
+  }
+}

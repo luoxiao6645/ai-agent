@@ -1,0 +1,2082 @@
+{
+  "logging_usage": {
+    "files_with_logging": 18,
+    "total_log_statements": 100,
+    "log_level_distribution": {
+      "DEBUG": 6,
+      "INFO": 35,
+      "WARNING": 13,
+      "ERROR": 46,
+      "CRITICAL": 0
+    },
+    "logging_imports": 28,
+    "print_statements": 630,
+    "files_using_print": 17,
+    "logger_configurations": 34,
+    "log_statements_by_file": {
+      "app.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "benchmark_test.py": {
+        "log_statements": 0,
+        "print_statements": 27
+      },
+      "config.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "deploy.py": {
+        "log_statements": 0,
+        "print_statements": 50
+      },
+      "enhanced_app.py": {
+        "log_statements": 0,
+        "print_statements": 52
+      },
+      "fix_client_init.py": {
+        "log_statements": 0,
+        "print_statements": 64
+      },
+      "health_check.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "logging_config.py": {
+        "log_statements": 4,
+        "print_statements": 0
+      },
+      "privacy_protection.py": {
+        "log_statements": 0,
+        "print_statements": 27
+      },
+      "quick_start.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "secure_setup.py": {
+        "log_statements": 0,
+        "print_statements": 57
+      },
+      "simple_test.py": {
+        "log_statements": 0,
+        "print_statements": 40
+      },
+      "streamlit_app.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "test_ark_api.py": {
+        "log_statements": 0,
+        "print_statements": 19
+      },
+      "test_system.py": {
+        "log_statements": 1,
+        "print_statements": 39
+      },
+      "code_quality_analyzer.py": {
+        "log_statements": 0,
+        "print_statements": 35
+      },
+      "main.py": {
+        "log_statements": 0,
+        "print_statements": 29
+      },
+      "code_quality_check.py": {
+        "log_statements": 0,
+        "print_statements": 43
+      },
+      "auto_code_fixer.py": {
+        "log_statements": 0,
+        "print_statements": 25
+      },
+      "static_analysis_tool.py": {
+        "log_statements": 0,
+        "print_statements": 37
+      },
+      "error_handling_checker.py": {
+        "log_statements": 1,
+        "print_statements": 41
+      },
+      "logging_checker.py": {
+        "log_statements": 4,
+        "print_statements": 44
+      },
+      "multimodal_agent/__init__.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/core/__init__.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/core/agent.py": {
+        "log_statements": 25,
+        "print_statements": 0
+      },
+      "multimodal_agent/core/executor.py": {
+        "log_statements": 7,
+        "print_statements": 0
+      },
+      "multimodal_agent/core/memory.py": {
+        "log_statements": 24,
+        "print_statements": 0
+      },
+      "multimodal_agent/core/planner.py": {
+        "log_statements": 4,
+        "print_statements": 0
+      },
+      "multimodal_agent/multimodal/__init__.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/multimodal/audio_processor.py": {
+        "log_statements": 2,
+        "print_statements": 0
+      },
+      "multimodal_agent/multimodal/file_processor.py": {
+        "log_statements": 2,
+        "print_statements": 0
+      },
+      "multimodal_agent/multimodal/image_processor.py": {
+        "log_statements": 2,
+        "print_statements": 0
+      },
+      "multimodal_agent/multimodal/processor.py": {
+        "log_statements": 7,
+        "print_statements": 0
+      },
+      "multimodal_agent/multimodal/text_processor.py": {
+        "log_statements": 2,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/__init__.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/api_caller.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/audio_processor.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/calculator.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/calendar_manager.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/code_exec.py": {
+        "log_statements": 3,
+        "print_statements": 1
+      },
+      "multimodal_agent/tools/data_analysis.py": {
+        "log_statements": 2,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/document.py": {
+        "log_statements": 2,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/email_sender.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/file_manager.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/image_processor.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/tool_manager.py": {
+        "log_statements": 5,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/translator.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "multimodal_agent/tools/web_search.py": {
+        "log_statements": 3,
+        "print_statements": 0
+      },
+      "performance/__init__.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "performance/async_processor.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "performance/cache_manager.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "performance/connection_pool.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "performance/optimization_config.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "performance/performance_monitor.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "security/__init__.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "security/exception_handler.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "security/input_validator.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "security/logging_system.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "security/secrets_manager.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "security/session_manager.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "ui/__init__.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      },
+      "ui/streamlit_app.py": {
+        "log_statements": 0,
+        "print_statements": 0
+      }
+    }
+  },
+  "log_level_analysis": {
+    "appropriate_usage": [
+      {
+        "file": "logging_config.py",
+        "line": 53,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "test_system.py",
+        "line": 63,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 87,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 125,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 128,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 185,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 296,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 339,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 343,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 386,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 412,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 465,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 504,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 550,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 581,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 627,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 662,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 665,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 674,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 677,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 23,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 55,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 78,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 229,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 245,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 50,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 100,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 133,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 163,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 202,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 215,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 237,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 292,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 317,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 363,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 425,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 429,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 453,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 457,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 26,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 109,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "line": 20,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "line": 41,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 20,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 40,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 20,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 41,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 53,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 81,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 175,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 497,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 19,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 42,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 72,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 71,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 83,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 83,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 129,
+        "practice": "在重要操作中使用了INFO日志"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 132,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 54,
+        "practice": "在异常处理中使用了错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 77,
+        "practice": "在异常处理中使用了错误日志"
+      }
+    ],
+    "questionable_usage": [],
+    "missing_error_logs": [
+      {
+        "file": "app.py",
+        "line": 115,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 27,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 34,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 227,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "deploy.py",
+        "line": 14,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "deploy.py",
+        "line": 26,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 31,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 44,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 54,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 135,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 151,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 168,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 179,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 212,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 240,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 308,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 310,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 161,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 187,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 193,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 196,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 218,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 246,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 25,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 36,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 113,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 156,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 190,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 239,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 259,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 298,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 325,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 347,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "health_check.py",
+        "line": 356,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 102,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 235,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 314,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 77,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 81,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 84,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 130,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 125,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 176,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 179,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 251,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 253,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 75,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 113,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 170,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 45,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 98,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 162,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 218,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 254,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 46,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 62,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "test_system.py",
+        "line": 98,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "test_system.py",
+        "line": 121,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 97,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 137,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 172,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 80,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 94,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 97,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 111,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 114,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 134,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 137,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 151,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 240,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "main.py",
+        "line": 243,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 58,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 93,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 135,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 173,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 212,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 250,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 73,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 128,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 186,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 253,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "auto_code_fixer.py",
+        "line": 289,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 80,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 83,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 128,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 182,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 228,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 231,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 37,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 60,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 66,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 67,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 74,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 78,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 95,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 103,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 105,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 108,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 138,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 145,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 174,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 231,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 234,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 286,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 303,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 313,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 108,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 185,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 244,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 306,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 223,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 270,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 609,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 122,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 135,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 149,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 163,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 177,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 191,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 286,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 393,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 126,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 83,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 107,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 98,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 133,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 203,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 240,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 258,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 294,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 319,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 373,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 401,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 48,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/audio_processor.py",
+        "line": 43,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "line": 47,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 46,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 163,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 173,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 202,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 204,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 227,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 229,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 24,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 87,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 165,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 24,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 134,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 139,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 169,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 207,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 231,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 236,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 277,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/email_sender.py",
+        "line": 38,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 48,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 60,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 70,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 81,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 92,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 45,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 248,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 382,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 38,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 139,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 11,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 18,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 25,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 32,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 39,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 202,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 216,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 233,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 79,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 91,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 118,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 146,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/performance_monitor.py",
+        "line": 22,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "performance/performance_monitor.py",
+        "line": 107,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/__init__.py",
+        "line": 23,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 69,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 124,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 164,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 294,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 308,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 283,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 24,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 92,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 197,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 248,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 274,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 24,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 213,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 247,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 34,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 254,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 274,
+        "issue": "异常处理中缺少错误日志"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 290,
+        "issue": "异常处理中缺少错误日志"
+      }
+    ],
+    "excessive_debug_logs": []
+  },
+  "security_analysis": {
+    "potential_leaks": [],
+    "safe_logging": [],
+    "files_with_risks": 0
+  },
+  "format_analysis": {
+    "consistent_formats": 0,
+    "inconsistent_formats": 0,
+    "format_issues": [
+      {
+        "file": "logging_config.py",
+        "line": 60,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "logging_config.py",
+        "line": 61,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "logging_config.py",
+        "line": 62,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 87,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 624,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 23,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 256,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 50,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 234,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 26,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "line": 20,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 20,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 20,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 53,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 438,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 19,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 129,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 132,
+        "issue": "使用了硬编码的日志消息",
+        "suggestion": "考虑添加上下文信息"
+      }
+    ],
+    "good_practices": [
+      {
+        "file": "logging_config.py",
+        "line": 53,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "test_system.py",
+        "line": 63,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "logging_checker.py",
+        "line": 85,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 125,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 128,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 185,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 224,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 271,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 296,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 309,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 339,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 343,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 368,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 386,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 412,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 465,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 504,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 550,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 581,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 610,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 619,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 627,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 662,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 665,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 674,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 677,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 55,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 211,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 229,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 245,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 97,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 100,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 130,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 133,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 159,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 163,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 202,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 212,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 215,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 237,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 287,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 292,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 310,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 312,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 314,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 317,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 363,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 394,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 425,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 429,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 453,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 457,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 105,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 109,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 127,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "line": 41,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 40,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 41,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 81,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 175,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 381,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 402,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 497,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 42,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 72,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 93,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 108,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 71,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 83,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 83,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 132,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 173,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 188,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 54,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 77,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 73,
+        "practice": "日志消息包含上下文信息"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 285,
+        "practice": "日志消息包含上下文信息"
+      }
+    ]
+  },
+  "summary": {
+    "timestamp": "2025-06-15T18:07:15.516711",
+    "total_files": 62,
+    "logging_coverage": 29.03225806451613,
+    "total_issues": 216
+  }
+}

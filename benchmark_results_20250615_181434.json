@@ -1,0 +1,76 @@
+{
+  "export_timestamp": "2025-06-15T18:14:34.059821",
+  "test_count": 4,
+  "results": {
+    "text_processing": {
+      "test_name": "text_processing",
+      "iterations": 100,
+      "total_time": 0.0005512237548828125,
+      "avg_time": 5.359649658203125e-06,
+      "min_time": 4.5299530029296875e-06,
+      "max_time": 1.33514404296875e-05,
+      "median_time": 4.76837158203125e-06,
+      "std_dev": 1.5856523924377862e-06,
+      "throughput": 181414.5328719723,
+      "success_rate": 1.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "timestamp": "2025-06-15T18:14:33.925275"
+    },
+    "async_processing": {
+      "test_name": "async_processing",
+      "iterations": 100,
+      "total_time": 0.1134951114654541,
+      "avg_time": 0.001134495735168457,
+      "min_time": 0.0011115074157714844,
+      "max_time": 0.0012359619140625,
+      "median_time": 0.001123666763305664,
+      "std_dev": 2.7248165658803594e-05,
+      "throughput": 881.0952181886549,
+      "success_rate": 1.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "timestamp": "2025-06-15T18:14:34.050312"
+    },
+    "memory_operations": {
+      "test_name": "memory_operations",
+      "iterations": 100,
+      "total_time": 0.005565643310546875,
+      "avg_time": 5.544900894165039e-05,
+      "min_time": 4.935264587402344e-05,
+      "max_time": 0.0002143383026123047,
+      "median_time": 5.054473876953125e-05,
+      "std_dev": 1.8903586544205863e-05,
+      "throughput": 17967.37491432488,
+      "success_rate": 1.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "timestamp": "2025-06-15T18:14:34.056667"
+    },
+    "json_serialization": {
+      "test_name": "json_serialization",
+      "iterations": 100,
+      "total_time": 0.0026471614837646484,
+      "avg_time": 2.630472183227539e-05,
+      "min_time": 1.621246337890625e-05,
+      "max_time": 0.0003745555877685547,
+      "median_time": 1.6927719116210938e-05,
+      "std_dev": 4.4500918639577714e-05,
+      "throughput": 37776.312708277044,
+      "success_rate": 1.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "timestamp": "2025-06-15T18:14:34.059789"
+    }
+  },
+  "summary": {
+    "total_tests": 4,
+    "overall_avg_time": 0.0003054022789001465,
+    "overall_throughput": 59509.82892819072,
+    "overall_success_rate": 1.0,
+    "total_memory_usage": 0.0,
+    "fastest_test": "text_processing",
+    "slowest_test": "async_processing",
+    "highest_throughput": "text_processing"
+  }
+}

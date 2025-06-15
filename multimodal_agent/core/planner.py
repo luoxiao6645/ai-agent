@@ -2,25 +2,30 @@
 任务规划器
 """
 import logging
+
 from typing import Dict, Any, List, Optional
 import json
 import re
 
 from langchain.llms.base import BaseLLM
+
 from langchain.prompts import PromptTemplate
 
 logger = logging.getLogger(__name__)
 
+
 class TaskPlanner:
     """任务规划器 - 使用ReAct框架进行复杂任务分解"""
-    
+
+
     def __init__(self, llm: BaseLLM):
         """初始化任务规划器"""
         self.llm = llm
         self.planning_prompt = self._create_planning_prompt()
-        
+
         logger.info("TaskPlanner initialized")
-    
+
+
     def _create_planning_prompt(self) -> PromptTemplate:
         """创建任务规划提示模板"""
         template = """
@@ -72,39 +77,40 @@ class TaskPlanner:
             input_variables=["user_input"],
             template=template
         )
-    
+
     async def plan_task(self, user_input: str) -> Dict[str, Any]:
         """
         制定任务执行计划
-        
+
         Args:
             user_input: 用户输入
-            
+
         Returns:
             任务执行计划
         """
         try:
             # 生成规划提示
             prompt = self.planning_prompt.format(user_input=user_input)
-            
+
             # 调用LLM生成计划
             response = await self.llm.agenerate([prompt])
             plan_text = response.generations[0][0].text.strip()
-            
+
             # 解析计划
             plan = self._parse_plan(plan_text)
-            
+
             # 验证和优化计划
             plan = self._validate_and_optimize_plan(plan, user_input)
-            
+
             logger.debug(f"Task plan generated: {plan['task_type']}")
             return plan
-            
+
         except Exception as e:
             logger.error(f"Failed to plan task: {e}")
             # 返回默认计划
             return self._create_default_plan(user_input)
-    
+
+
     def _parse_plan(self, plan_text: str) -> Dict[str, Any]:
         """解析LLM生成的计划文本"""
         try:
@@ -116,28 +122,29 @@ class TaskPlanner:
                 return plan
             else:
                 raise ValueError("No JSON found in plan text")
-                
+
         except (json.JSONDecodeError, ValueError) as e:
             logger.warning(f"Failed to parse plan JSON: {e}")
             # 尝试简单解析
             return self._simple_parse_plan(plan_text)
-    
+
+
     def _simple_parse_plan(self, plan_text: str) -> Dict[str, Any]:
         """简单解析计划文本"""
         # 基于关键词的简单解析
         task_type = "simple"
         use_agent = True
-        
+
         # 检测复杂任务关键词
         complex_keywords = ["步骤", "首先", "然后", "最后", "分析", "处理", "生成"]
         if any(keyword in plan_text for keyword in complex_keywords):
             task_type = "complex"
-        
+
         # 检测工具使用
         tool_keywords = ["搜索", "计算", "翻译", "分析", "处理", "发送"]
         if any(keyword in plan_text for keyword in tool_keywords):
             use_agent = True
-        
+
         return {
             "task_type": task_type,
             "use_agent": use_agent,
@@ -147,7 +154,8 @@ class TaskPlanner:
             "risk_level": "low",
             "fallback_plan": "使用默认Agent处理"
         }
-    
+
+
     def _validate_and_optimize_plan(self, plan: Dict[str, Any], user_input: str) -> Dict[str, Any]:
         """验证和优化执行计划"""
         # 确保必要字段存在
@@ -158,32 +166,34 @@ class TaskPlanner:
         plan.setdefault("estimated_time", 5)
         plan.setdefault("risk_level", "low")
         plan.setdefault("fallback_plan", "使用默认Agent处理")
-        
+
         # 优化查询文本
         if not plan["query"] or plan["query"] == user_input:
             plan["query"] = self._optimize_query(user_input)
-        
+
         # 验证步骤
         if plan["steps"]:
             plan["steps"] = self._validate_steps(plan["steps"])
-        
+
         return plan
-    
+
+
     def _optimize_query(self, user_input: str) -> str:
         """优化查询文本"""
         # 简单的查询优化
         query = user_input.strip()
-        
+
         # 添加上下文提示
         if len(query) < 10:
             query = f"请帮我处理以下请求：{query}"
-        
+
         return query
-    
+
+
     def _validate_steps(self, steps: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """验证执行步骤"""
         validated_steps = []
-        
+
         for i, step in enumerate(steps):
             if isinstance(step, dict):
                 validated_step = {
@@ -193,9 +203,10 @@ class TaskPlanner:
                     "expected_output": step.get("expected_output", "处理结果")
                 }
                 validated_steps.append(validated_step)
-        
+
         return validated_steps
-    
+
+
     def _create_default_plan(self, user_input: str) -> Dict[str, Any]:
         """创建默认执行计划"""
         return {
@@ -214,7 +225,8 @@ class TaskPlanner:
             "risk_level": "low",
             "fallback_plan": "直接返回用户输入"
         }
-    
+
+
     def estimate_complexity(self, user_input: str) -> str:
         """估算任务复杂度"""
         # 基于输入长度和关键词判断复杂度
@@ -222,11 +234,11 @@ class TaskPlanner:
             "分析", "比较", "生成", "创建", "设计", "计算",
             "搜索", "翻译", "处理", "转换", "整理", "总结"
         ]
-        
+
         if len(user_input) > 100:
             return "complex"
-        
+
         if any(indicator in user_input for indicator in complex_indicators):
             return "complex"
-        
+
         return "simple"

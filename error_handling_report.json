@@ -1,0 +1,1464 @@
+{
+  "exception_handling": {
+    "files_with_try_except": 50,
+    "total_try_blocks": 208,
+    "bare_except_blocks": 4,
+    "specific_exceptions": 214,
+    "finally_blocks": 3,
+    "missing_error_handling": [
+      {
+        "file": "benchmark_test.py",
+        "function": "_generate_report",
+        "line": 364,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "fix_client_init.py",
+        "function": "create_env_file",
+        "line": 43,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "secure_setup.py",
+        "function": "verify_gitignore",
+        "line": 129,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "function": "generate_report",
+        "line": 265,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "function": "generate_report",
+        "line": 296,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "function": "_is_code_safe",
+        "line": 76,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "function": "_create_session",
+        "line": 54,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "security/logging_system.py",
+        "function": "log",
+        "line": 99,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "function": "file_interface",
+        "line": 128,
+        "issue": "函数包含风险操作但缺少异常处理"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "function": "image_interface",
+        "line": 162,
+        "issue": "函数包含风险操作但缺少异常处理"
+      }
+    ],
+    "good_practices": [],
+    "bad_practices": [
+      {
+        "file": "benchmark_test.py",
+        "line": 227,
+        "issue": "使用了裸except语句",
+        "suggestion": "指定具体的异常类型"
+      },
+      {
+        "file": "health_check.py",
+        "line": 347,
+        "issue": "使用了裸except语句",
+        "suggestion": "指定具体的异常类型"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 125,
+        "issue": "使用了裸except语句",
+        "suggestion": "指定具体的异常类型"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 92,
+        "issue": "使用了裸except语句",
+        "suggestion": "指定具体的异常类型"
+      }
+    ]
+  },
+  "logging_in_exceptions": {
+    "exceptions_with_logging": 120,
+    "exceptions_without_logging": 213,
+    "good_logging_practices": [
+      {
+        "file": "test_system.py",
+        "line": 63,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 128,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 185,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 296,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 343,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 386,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 412,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 465,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 504,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 550,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 581,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 627,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 665,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 677,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 55,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 100,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 133,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 163,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 202,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 215,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 237,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 292,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 317,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 363,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 429,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 457,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 109,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "line": 41,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 40,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 41,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 81,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 175,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 497,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 42,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 72,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 71,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 83,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 132,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 54,
+        "practice": "使用了适当的错误日志级别"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 77,
+        "practice": "使用了适当的错误日志级别"
+      }
+    ],
+    "missing_logging": [
+      {
+        "file": "app.py",
+        "line": 115,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 27,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 34,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "benchmark_test.py",
+        "line": 227,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "deploy.py",
+        "line": 14,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "deploy.py",
+        "line": 26,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 31,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 44,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 54,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 151,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 212,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 240,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "enhanced_app.py",
+        "line": 310,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 161,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 187,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 193,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 196,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "fix_client_init.py",
+        "line": 218,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 25,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 36,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 113,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 156,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 190,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 239,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 259,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 298,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 325,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 347,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "health_check.py",
+        "line": 356,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 102,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 235,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "privacy_protection.py",
+        "line": 314,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 77,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 81,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 84,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "quick_start.py",
+        "line": 130,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 176,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "secure_setup.py",
+        "line": 179,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 75,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 113,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "simple_test.py",
+        "line": 170,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 45,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 98,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 162,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 218,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "streamlit_app.py",
+        "line": 254,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 46,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "test_ark_api.py",
+        "line": 62,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "test_system.py",
+        "line": 61,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "test_system.py",
+        "line": 98,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "test_system.py",
+        "line": 121,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 137,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "code_quality_analyzer.py",
+        "line": 172,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 80,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 94,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 97,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 111,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 114,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 134,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 137,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 151,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 240,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "main.py",
+        "line": 243,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 58,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 93,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 135,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 173,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "code_quality_check.py",
+        "line": 212,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 83,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 128,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 182,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 228,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "line": 231,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 37,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 60,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 67,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 74,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 78,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 95,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 105,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 108,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 138,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 145,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 174,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 231,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 234,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 286,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 303,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "line": 313,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 127,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 184,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 223,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 270,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 295,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 342,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 385,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 411,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 464,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 503,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 549,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 580,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 609,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 664,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/agent.py",
+        "line": 676,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 54,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 75,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 122,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 135,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 149,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 163,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 177,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/executor.py",
+        "line": 191,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 99,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 132,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 162,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 201,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 214,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 236,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 286,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 291,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 316,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 362,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 393,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 428,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/memory.py",
+        "line": 456,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 108,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 126,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/audio_processor.py",
+        "line": 40,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 39,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 83,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/file_processor.py",
+        "line": 107,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 40,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/image_processor.py",
+        "line": 98,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 80,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 133,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 174,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 203,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 240,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 258,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 294,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 319,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 373,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/processor.py",
+        "line": 496,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/multimodal/text_processor.py",
+        "line": 41,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/api_caller.py",
+        "line": 48,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/audio_processor.py",
+        "line": 43,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/calculator.py",
+        "line": 47,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/calendar_manager.py",
+        "line": 46,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 71,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 163,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 173,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 202,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 204,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 227,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/code_exec.py",
+        "line": 229,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 24,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 70,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 87,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/data_analysis.py",
+        "line": 165,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 24,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 82,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 134,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 139,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 169,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 207,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 231,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 236,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/document.py",
+        "line": 277,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/email_sender.py",
+        "line": 38,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 48,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 60,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 70,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 81,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/file_manager.py",
+        "line": 92,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/image_processor.py",
+        "line": 45,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 131,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 248,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/tool_manager.py",
+        "line": 382,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/translator.py",
+        "line": 38,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 53,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 76,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "multimodal_agent/tools/web_search.py",
+        "line": 139,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 11,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 18,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 25,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 32,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/__init__.py",
+        "line": 39,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 202,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 216,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 233,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 79,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 91,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 118,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/connection_pool.py",
+        "line": 146,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/performance_monitor.py",
+        "line": 22,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "performance/performance_monitor.py",
+        "line": 107,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 69,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 124,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 164,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/exception_handler.py",
+        "line": 294,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/logging_system.py",
+        "line": 283,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 24,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 92,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 197,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 248,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "line": 274,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 24,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 213,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "security/session_manager.py",
+        "line": 247,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 34,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 254,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 274,
+        "issue": "except块中缺少日志记录"
+      },
+      {
+        "file": "ui/streamlit_app.py",
+        "line": 290,
+        "issue": "except块中缺少日志记录"
+      }
+    ]
+  },
+  "error_propagation": {
+    "functions_that_raise": 12,
+    "functions_that_catch_and_reraise": 9,
+    "functions_that_swallow_errors": 7,
+    "custom_exceptions": 0,
+    "error_propagation_issues": [
+      {
+        "file": "benchmark_test.py",
+        "function": "benchmark_async_processor",
+        "line": 192,
+        "issue": "函数吞没了异常（except pass）"
+      },
+      {
+        "file": "static_analysis_tool.py",
+        "function": "check_imports",
+        "line": 192,
+        "issue": "函数吞没了异常（except pass）"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "function": "analyze_exception_handling",
+        "line": 33,
+        "issue": "函数吞没了异常（except pass）"
+      },
+      {
+        "file": "error_handling_checker.py",
+        "function": "check_error_propagation",
+        "line": 183,
+        "issue": "函数吞没了异常（except pass）"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "function": "_worker_loop",
+        "line": 195,
+        "issue": "函数吞没了异常（except pass）"
+      },
+      {
+        "file": "performance/performance_monitor.py",
+        "function": "_monitoring_loop",
+        "line": 90,
+        "issue": "函数吞没了异常（except pass）"
+      },
+      {
+        "file": "security/secrets_manager.py",
+        "function": "_get_or_create_encryption_key",
+        "line": 78,
+        "issue": "函数吞没了异常（except pass）"
+      }
+    ]
+  },
+  "user_friendly_errors": {
+    "user_facing_errors": 0,
+    "technical_errors": 6,
+    "good_error_messages": [],
+    "poor_error_messages": [
+      {
+        "file": "config.py",
+        "line": 66,
+        "message": "raise ValueError(\"OPENAI_API_KEY is required\")",
+        "issue": "错误信息过于简短或技术性"
+      },
+      {
+        "file": "multimodal_agent/core/planner.py",
+        "line": 124,
+        "message": "raise ValueError(\"No JSON found in plan text\")",
+        "issue": "错误信息过于简短或技术性"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 185,
+        "message": "raise Exception(\"Task was cancelled\")",
+        "issue": "错误信息过于简短或技术性"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 187,
+        "message": "raise ValueError(f\"Task {task_id} not found\")",
+        "issue": "错误信息过于简短或技术性"
+      },
+      {
+        "file": "performance/async_processor.py",
+        "line": 190,
+        "message": "raise TimeoutError(f\"Task {task_id} timed out\")",
+        "issue": "错误信息过于简短或技术性"
+      }
+    ]
+  },
+  "summary": {
+    "timestamp": "2025-06-15T18:06:15.217358",
+    "total_files": 61,
+    "coverage_rate": 81.9672131147541,
+    "total_issues": 26
+  }
+}
