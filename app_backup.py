@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 智能多模态AI Agent - Streamlit Cloud版本
-专为Streamlit Cloud环境优化，修复ModuleNotFoundError问题
+专为Streamlit Cloud环境优化，内置所有必要功能
 """
 import os
 import streamlit as st
