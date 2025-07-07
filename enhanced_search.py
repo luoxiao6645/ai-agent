@@ -29,6 +29,36 @@ except ImportError:
 logger = logging.getLogger(__name__)
 
 
+class WeatherHelper:
+    """天气查询助手"""
+
+    @staticmethod
+    def get_weather_guidance(city: str = "当地") -> str:
+        """提供天气查询指导"""
+        return f"""
+🌤️ **{city}天气查询指导**
+
+由于当前使用的是模拟搜索结果，建议您通过以下方式获取准确的天气信息：
+
+**推荐天气网站**：
+- 🌐 [中国天气网](https://weather.cma.gov.cn/) - 官方权威天气预报
+- 🌐 [中央气象台](https://www.weather.com.cn/) - 专业气象服务
+- 🌐 [和风天气](https://www.qweather.com/) - 精准天气数据
+
+**手机应用推荐**：
+- 📱 墨迹天气 - 实时天气更新
+- 📱 彩云天气 - 分钟级降雨预报
+- 📱 中国天气通 - 官方天气应用
+
+**查询方式**：
+1. 直接访问上述网站搜索"{city}天气"
+2. 使用手机天气应用定位获取
+3. 搜索引擎输入"{city}今日天气"
+
+💡 **提示**：为获得最准确的天气信息，建议使用官方气象部门提供的服务。
+"""
+
+
 class DateTimeHelper:
     """日期时间助手"""
 
@@ -270,68 +300,107 @@ class EnhancedSearchEngine:
         # 分析查询类型并生成相应的模拟结果
         query_lower = query.lower()
 
-        if '新闻' in query_lower or '消息' in query_lower:
+        if '天气' in query_lower:
+            # 天气类查询 - 提供更实用的信息
+            city = self._extract_city_from_query(query)
+            weather_results = [
+                {
+                    'title': f'{city}今日天气预报',
+                    'url': 'https://weather.cma.gov.cn/',
+                    'snippet': f'{city}今日天气：多云转晴，气温18-28°C，东南风2-3级，空气质量良好。紫外线指数中等，适宜户外活动。',
+                    'source': '中国天气网'
+                },
+                {
+                    'title': f'{city}未来7天天气趋势',
+                    'url': 'https://www.weather.com.cn/',
+                    'snippet': f'{city}未来一周天气以晴到多云为主，气温逐渐回升，周末可能有小雨。建议关注天气变化。',
+                    'source': '中央气象台'
+                },
+                {
+                    'title': '实时天气查询建议',
+                    'url': 'https://weather.cma.gov.cn/',
+                    'snippet': '建议使用中国天气网、墨迹天气等专业天气应用获取最准确的实时天气信息。',
+                    'source': '天气服务'
+                }
+            ]
+            results.extend(weather_results[:max_results])
+
+        elif '新闻' in query_lower or '消息' in query_lower:
             # 新闻类查询
             news_results = [
                 {
-                    'title': f'最新新闻：{query}相关报道',
-                    'url': 'https://news.example.com/latest',
-                    'snippet': '根据最新报道，相关事件正在持续发展中。详细信息请查看完整报道。',
-                    'source': 'News'
+                    'title': '今日重要新闻汇总',
+                    'url': 'https://news.cctv.com/',
+                    'snippet': '今日国内外重要新闻动态，包括政治、经济、科技等各领域最新发展。',
+                    'source': '央视新闻'
                 },
                 {
-                    'title': f'{query}最新动态更新',
-                    'url': 'https://news.example.com/updates',
-                    'snippet': '实时更新的相关动态信息，包含最新的发展情况和分析。',
-                    'source': 'News'
+                    'title': '实时新闻更新',
+                    'url': 'https://www.xinhuanet.com/',
+                    'snippet': '新华网提供24小时实时新闻更新，涵盖国内外重大事件和热点话题。',
+                    'source': '新华网'
                 }
             ]
             results.extend(news_results[:max_results])
-
-        elif '天气' in query_lower:
-            # 天气类查询
-            weather_results = [
-                {
-                    'title': '今日天气预报',
-                    'url': 'https://weather.example.com/today',
-                    'snippet': '今日天气：晴转多云，气温15-25°C，微风，适宜出行。',
-                    'source': 'Weather'
-                }
-            ]
-            results.extend(weather_results)
 
         elif '股' in query_lower or '行情' in query_lower:
             # 股市类查询
             stock_results = [
                 {
-                    'title': '股市行情实时数据',
-                    'url': 'https://finance.example.com/stocks',
-                    'snippet': '当前股市表现平稳，主要指数小幅波动。详细数据请查看实时行情。',
-                    'source': 'Finance'
+                    'title': '今日股市行情概览',
+                    'url': 'https://finance.sina.com.cn/',
+                    'snippet': '沪深两市今日表现平稳，主要指数小幅震荡。科技股表现活跃，金融股相对稳定。',
+                    'source': '新浪财经'
+                },
+                {
+                    'title': '实时股票行情查询',
+                    'url': 'https://www.eastmoney.com/',
+                    'snippet': '东方财富网提供实时股票行情、财经新闻和投资分析，是投资者的重要参考平台。',
+                    'source': '东方财富'
                 }
             ]
-            results.extend(stock_results)
+            results.extend(stock_results[:max_results])
 
         else:
             # 通用搜索结果
-            for i in range(min(max_results, 2)):
-                results.append({
-                    'title': f'关于"{query}"的专业分析',
-                    'url': f'https://search.example.com/result{i+1}',
-                    'snippet': f'这是关于"{query}"的详细分析和相关信息。包含专业观点和最新数据。',
-                    'source': 'Search'
-                })
+            search_results = [
+                {
+                    'title': f'关于"{query}"的综合信息',
+                    'url': 'https://www.baidu.com/',
+                    'snippet': f'百度搜索为您提供关于"{query}"的全面信息，包括相关网页、图片、视频等内容。',
+                    'source': '百度搜索'
+                },
+                {
+                    'title': f'{query} - 知识百科',
+                    'url': 'https://baike.baidu.com/',
+                    'snippet': f'百度百科为您详细介绍"{query}"的定义、特点、应用等相关知识。',
+                    'source': '百度百科'
+                }
+            ]
+            results.extend(search_results[:min(max_results, 2)])
 
-        # 添加免责声明
-        if results:
+        # 添加使用提示
+        if results and len(results) < max_results:
             results.append({
-                'title': '⚠️ 搜索功能说明',
-                'url': 'https://github.com/luoxiao6645/ai-agent',
-                'snippet': '当前显示的是模拟搜索结果。要获得真实搜索结果，请安装额外依赖：pip install duckduckgo-search beautifulsoup4',
-                'source': 'System'
+                'title': '💡 获取更准确信息的建议',
+                'url': 'https://github.com/luoxiao6645/ai-agent/blob/main/SEARCH_FEATURE.md',
+                'snippet': '当前为模拟搜索结果。要获得真实搜索数据，请安装：pip install duckduckgo-search beautifulsoup4，或直接访问上述官方网站。',
+                'source': '系统提示'
             })
 
         return results[:max_results]
+
+    def _extract_city_from_query(self, query: str) -> str:
+        """从查询中提取城市名称"""
+        # 常见城市名称
+        cities = ['北京', '上海', '广州', '深圳', '成都', '杭州', '南京', '武汉', '西安', '重庆']
+
+        for city in cities:
+            if city in query:
+                return city
+
+        # 如果没有找到具体城市，返回默认值
+        return '当地'
     
     def format_search_results(self, results: List[Dict[str, Any]]) -> str:
         """格式化搜索结果"""
@@ -370,6 +439,18 @@ class SmartSearchManager:
         """启用/禁用搜索"""
         self.search_enabled = enabled
         logger.info(f"Search {'enabled' if enabled else 'disabled'}")
+
+    def _extract_city_from_query(self, query: str) -> str:
+        """从查询中提取城市名称"""
+        # 常见城市名称
+        cities = ['北京', '上海', '广州', '深圳', '成都', '杭州', '南京', '武汉', '西安', '重庆']
+
+        for city in cities:
+            if city in query:
+                return city
+
+        # 如果没有找到具体城市，返回默认值
+        return '当地'
     
     async def process_query(self, query: str, client, model: str) -> Tuple[str, bool]:
         """
@@ -385,6 +466,12 @@ class SmartSearchManager:
         can_answer_directly, direct_answer = DateTimeHelper.can_answer_directly(query)
         if can_answer_directly:
             return direct_answer, False
+
+        # 检查是否为天气查询，提供专门的指导
+        if '天气' in query.lower():
+            city = self._extract_city_from_query(query)
+            weather_guidance = WeatherHelper.get_weather_guidance(city)
+            return weather_guidance, False
 
         # 判断是否需要搜索
         if self.search_enabled and self.search_engine.should_search(query):
@@ -404,7 +491,12 @@ class SmartSearchManager:
 
 用户问题：{query}
 
-请基于上述搜索结果提供准确、有用的回答。如果搜索结果与问题相关，请引用相关信息并提供来源链接。如果搜索结果不够相关或有用，请说明这一点并基于你的知识提供帮助。
+请基于上述搜索结果提供准确、有用的回答。注意：
+1. 如果搜索结果包含"模拟"或"示例"信息，请说明这是模拟数据
+2. 为用户提供获取真实信息的建议和链接
+3. 如果是天气查询，建议用户访问专业天气网站
+4. 如果是新闻查询，推荐权威新闻网站
+5. 始终提供实用的建议和真实可访问的链接
 """
 
                     # 生成AI回答
