@@ -5,9 +5,18 @@
 """
 import os
 import streamlit as st
+import asyncio
 from datetime import datetime
 from typing import Optional, Tuple, Any
 from openai import OpenAI
+
+# 导入搜索功能
+try:
+    from enhanced_search import search_manager
+    SEARCH_AVAILABLE = True
+except ImportError as e:
+    SEARCH_AVAILABLE = False
+    print(f"⚠️ 搜索功能不可用: {e}")
 
 
 class APIClientManager:
@@ -120,26 +129,69 @@ class StreamlitUIHelper:
             st.markdown("### 🤖 智能AI助手")
             st.markdown("---")
 
+            # 搜索设置
+            if SEARCH_AVAILABLE:
+                st.markdown("#### 🔍 搜索设置")
+                search_enabled = st.checkbox(
+                    "启用联网搜索",
+                    value=True,
+                    help="自动搜索最新信息来回答问题"
+                )
+
+                # 更新搜索状态
+                if 'search_enabled' not in st.session_state:
+                    st.session_state.search_enabled = True
+
+                if search_enabled != st.session_state.search_enabled:
+                    st.session_state.search_enabled = search_enabled
+                    search_manager.enable_search(search_enabled)
+                    if search_enabled:
+                        st.success("✅ 联网搜索已启用")
+                    else:
+                        st.info("ℹ️ 联网搜索已禁用")
+
+                st.markdown("---")
+
             st.markdown("#### ✨ 功能特性")
-            st.markdown("""
-            - 💬 智能对话交流
-            - 📁 文件内容分析
-            - 🔍 文本总结分析
-            - 🎯 多种处理模式
-            """)
+            features = [
+                "💬 智能对话交流",
+                "📁 文件内容分析",
+                "🔍 文本总结分析",
+                "🎯 多种处理模式"
+            ]
+
+            if SEARCH_AVAILABLE:
+                features.insert(1, "🌐 联网实时搜索")
+
+            for feature in features:
+                st.markdown(f"- {feature}")
 
             st.markdown("#### 📊 使用统计")
             if 'chat_count' not in st.session_state:
                 st.session_state.chat_count = 0
-            st.metric("对话次数", st.session_state.chat_count)
+            if 'search_count' not in st.session_state:
+                st.session_state.search_count = 0
+
+            col1, col2 = st.columns(2)
+            with col1:
+                st.metric("对话次数", st.session_state.chat_count)
+            with col2:
+                if SEARCH_AVAILABLE:
+                    st.metric("搜索次数", st.session_state.search_count)
 
             st.markdown("---")
             st.markdown("#### 💡 使用提示")
-            st.markdown("""
-            - 直接输入问题开始对话
-            - 上传文件进行AI分析
-            - 支持多种文件格式
-            """)
+            tips = [
+                "直接输入问题开始对话",
+                "上传文件进行AI分析",
+                "支持多种文件格式"
+            ]
+
+            if SEARCH_AVAILABLE:
+                tips.insert(1, "询问最新信息会自动搜索")
+
+            for tip in tips:
+                st.markdown(f"- {tip}")
 
 
 class FileProcessor:
@@ -230,32 +282,13 @@ class ChatManager:
         # 生成AI回复
         with st.chat_message("assistant"):
             try:
-                with st.spinner("思考中..."):
-                    response = client.chat.completions.create(
-                        model=model,
-                        messages=[
-                            {"role": m["role"], "content": m["content"]}
-                            for m in st.session_state.messages[-10:]  # 保留最近10条消息
-                        ],
-                        max_tokens=1500,
-                        temperature=0.7,
-                        stream=True
-                    )
-
-                    # 流式显示回复
-                    response_placeholder = st.empty()
-                    full_response = ""
-
-                    for chunk in response:
-                        if chunk.choices[0].delta.content is not None:
-                            full_response += chunk.choices[0].delta.content
-                            response_placeholder.markdown(full_response + "▌")
-
-                    response_placeholder.markdown(full_response)
-
-                # 添加AI回复到历史
-                st.session_state.messages.append({"role": "assistant", "content": full_response})
-                st.session_state.chat_count += 1
+                # 检查是否启用搜索功能
+                if SEARCH_AVAILABLE and st.session_state.get('search_enabled', True):
+                    # 使用搜索增强的处理
+                    ChatManager._process_with_search(client, model, prompt)
+                else:
+                    # 普通处理
+                    ChatManager._process_normal(client, model, prompt)
 
             except Exception as e:
                 st.error(f"生成回复时出错: {e}")
@@ -263,6 +296,91 @@ class ChatManager:
                     "role": "assistant",
                     "content": f"抱歉，处理您的请求时出现了错误: {e}"
                 })
+
+    @staticmethod
+    def _process_with_search(client: OpenAI, model: str, prompt: str):
+        """使用搜索增强的处理"""
+        try:
+            # 显示搜索状态
+            status_placeholder = st.empty()
+            response_placeholder = st.empty()
+
+            # 检查是否需要搜索
+            if search_manager.search_engine.should_search(prompt):
+                status_placeholder.info("🔍 正在搜索最新信息...")
+
+                # 执行异步搜索
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                try:
+                    full_response, used_search = loop.run_until_complete(
+                        search_manager.process_query(prompt, client, model)
+                    )
+
+                    if used_search:
+                        st.session_state.search_count = st.session_state.get('search_count', 0) + 1
+                        status_placeholder.success("✅ 已获取最新信息")
+                    else:
+                        status_placeholder.empty()
+
+                finally:
+                    loop.close()
+            else:
+                # 不需要搜索，正常处理
+                status_placeholder.info("🤔 正在思考...")
+                response = client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {"role": m["role"], "content": m["content"]}
+                        for m in st.session_state.messages[-10:]
+                    ],
+                    max_tokens=1500,
+                    temperature=0.7
+                )
+                full_response = response.choices[0].message.content
+                status_placeholder.empty()
+
+            # 显示回复
+            response_placeholder.markdown(full_response)
+
+            # 添加到历史
+            st.session_state.messages.append({"role": "assistant", "content": full_response})
+            st.session_state.chat_count += 1
+
+        except Exception as e:
+            st.error(f"搜索处理失败: {e}")
+            # 回退到普通处理
+            ChatManager._process_normal(client, model, prompt)
+
+    @staticmethod
+    def _process_normal(client: OpenAI, model: str, prompt: str):
+        """普通处理（无搜索）"""
+        with st.spinner("思考中..."):
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": m["role"], "content": m["content"]}
+                    for m in st.session_state.messages[-10:]  # 保留最近10条消息
+                ],
+                max_tokens=1500,
+                temperature=0.7,
+                stream=True
+            )
+
+            # 流式显示回复
+            response_placeholder = st.empty()
+            full_response = ""
+
+            for chunk in response:
+                if chunk.choices[0].delta.content is not None:
+                    full_response += chunk.choices[0].delta.content
+                    response_placeholder.markdown(full_response + "▌")
+
+            response_placeholder.markdown(full_response)
+
+        # 添加AI回复到历史
+        st.session_state.messages.append({"role": "assistant", "content": full_response})
+        st.session_state.chat_count += 1
 
 # 页面配置
 StreamlitUIHelper.setup_page_config()

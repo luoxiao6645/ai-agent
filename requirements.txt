@@ -8,6 +8,11 @@ python-dotenv>=1.0.0
 requests>=2.31.0
 urllib3>=2.0.0
 
+# 搜索功能（可选）
+# duckduckgo-search>=3.9.0  # 可选：更好的搜索体验
+# beautifulsoup4>=4.12.0    # 可选：更好的HTML解析
+# aiohttp>=3.8.0            # 可选：异步HTTP请求
+
 # Web框架（健康检查端点）
 flask>=2.3.0
 
