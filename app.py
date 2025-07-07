@@ -305,40 +305,25 @@ class ChatManager:
             status_placeholder = st.empty()
             response_placeholder = st.empty()
 
-            # 检查是否需要搜索
-            if search_manager.search_engine.should_search(prompt):
-                status_placeholder.info("🔍 正在搜索最新信息...")
+            # 使用智能搜索管理器处理所有查询
+            status_placeholder.info("🤔 正在分析您的问题...")
 
-                # 执行异步搜索
-                loop = asyncio.new_event_loop()
-                asyncio.set_event_loop(loop)
-                try:
-                    full_response, used_search = loop.run_until_complete(
-                        search_manager.process_query(prompt, client, model)
-                    )
-
-                    if used_search:
-                        st.session_state.search_count = st.session_state.get('search_count', 0) + 1
-                        status_placeholder.success("✅ 已获取最新信息")
-                    else:
-                        status_placeholder.empty()
-
-                finally:
-                    loop.close()
-            else:
-                # 不需要搜索，正常处理
-                status_placeholder.info("🤔 正在思考...")
-                response = client.chat.completions.create(
-                    model=model,
-                    messages=[
-                        {"role": m["role"], "content": m["content"]}
-                        for m in st.session_state.messages[-10:]
-                    ],
-                    max_tokens=1500,
-                    temperature=0.7
+            # 执行智能查询处理
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            try:
+                full_response, used_search = loop.run_until_complete(
+                    search_manager.process_query(prompt, client, model)
                 )
-                full_response = response.choices[0].message.content
-                status_placeholder.empty()
+
+                if used_search:
+                    st.session_state.search_count = st.session_state.get('search_count', 0) + 1
+                    status_placeholder.success("✅ 已获取最新信息")
+                else:
+                    status_placeholder.empty()
+
+            finally:
+                loop.close()
 
             # 显示回复
             response_placeholder.markdown(full_response)

@@ -13,6 +13,7 @@ import logging
 import locale
 
 import requests
+import urllib.parse
 
 try:
     from bs4 import BeautifulSoup
@@ -362,22 +363,17 @@ class EnhancedSearchEngine:
             results.extend(stock_results[:max_results])
 
         else:
-            # 通用搜索结果
+            # 通用搜索结果 - 提供百度搜索链接
+            search_url = f"https://www.baidu.com/s?wd={urllib.parse.quote(query)}"
             search_results = [
                 {
-                    'title': f'关于"{query}"的综合信息',
-                    'url': 'https://www.baidu.com/',
-                    'snippet': f'百度搜索为您提供关于"{query}"的全面信息，包括相关网页、图片、视频等内容。',
+                    'title': f'在百度搜索"{query}"',
+                    'url': search_url,
+                    'snippet': f'点击链接在百度搜索"{query}"，获取最新、最全面的相关信息。百度会为您提供网页、图片、视频等多种类型的搜索结果。',
                     'source': '百度搜索'
-                },
-                {
-                    'title': f'{query} - 知识百科',
-                    'url': 'https://baike.baidu.com/',
-                    'snippet': f'百度百科为您详细介绍"{query}"的定义、特点、应用等相关知识。',
-                    'source': '百度百科'
                 }
             ]
-            results.extend(search_results[:min(max_results, 2)])
+            results.extend(search_results)
 
         # 添加使用提示
         if results and len(results) < max_results:
@@ -406,25 +402,57 @@ class EnhancedSearchEngine:
         """格式化搜索结果"""
         if not results:
             return "未找到相关搜索结果。"
-        
+
+        # 去重处理 - 按URL去重
+        unique_results = []
+        seen_urls = set()
+
+        for result in results:
+            url = result.get('url', '')
+            if url not in seen_urls:
+                unique_results.append(result)
+                seen_urls.add(url)
+
+        # 如果去重后只有一个结果，使用简化格式
+        if len(unique_results) == 1:
+            result = unique_results[0]
+            title = result.get('title', '搜索结果')
+            url = result.get('url', '')
+            snippet = result.get('snippet', '无摘要')
+            source = result.get('source', '未知来源')
+
+            # 限制摘要长度
+            if len(snippet) > 150:
+                snippet = snippet[:150] + "..."
+
+            return f"""🔍 **搜索建议**:
+
+📄 {snippet}
+
+🔗 **推荐链接**: [{title}]({url})
+📍 **来源**: {source}
+
+💡 **提示**: 点击上方链接获取最新准确信息。"""
+
+        # 多个结果时使用完整格式
         formatted = ["🔍 **搜索结果**:\n"]
-        
-        for i, result in enumerate(results, 1):
+
+        for i, result in enumerate(unique_results, 1):
             title = result.get('title', '无标题')
             url = result.get('url', '')
             snippet = result.get('snippet', '无摘要')
             source = result.get('source', '未知来源')
-            
+
             # 限制摘要长度
             if len(snippet) > 200:
                 snippet = snippet[:200] + "..."
-            
+
             formatted.append(f"**{i}. {title}**")
             formatted.append(f"   📄 {snippet}")
             formatted.append(f"   🔗 [{url}]({url})")
             formatted.append(f"   📍 来源: {source}")
             formatted.append("")
-        
+
         return "\n".join(formatted)
 
 
